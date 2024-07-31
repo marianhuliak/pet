@@ -75,6 +75,9 @@ const Header = () => {
             className={styles.bergerIcon}
             width={30}
             height={30}
+
+
+            
           />
 
           <div className={styles.menuItems}>
