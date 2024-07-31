@@ -1,0 +1,56 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import styles from "./Footer.module.scss";
+
+import instagramLogo from "./images/instagramLogo.svg";
+import youTubeLogo from "./images/youTubeLogo.svg";
+import facebookLogo from "./images/facebookLogo.svg";
+
+const Footer = () => {
+  return (
+    <div className={styles.footerContainer}>
+        <div className={styles.containerData}>
+      <div className={styles.hoursContainer}>
+        <p className={styles.heading}>Години роботи</p>
+        <p className={styles.hours}>
+          понеділок - п'ятниця <br /> 9.00 - 18.00 <br /> прийом замовлень - ONLINE 24/7
+        </p>
+      </div>
+
+      <div className={styles.contactContainer}>
+        <p className={styles.heading}>Контактні дані</p>
+        <p className={styles.contactDetails}>
+          +38 050 303 94 94 <br /> +38 066 210 00 95
+        </p>
+      </div>
+      </div>
+
+
+      <div className={styles.socialMediaContainer}>
+        <p className={styles.heading}>Соціальні мережі</p>
+        <div className={styles.iconsContainer}>
+          <Image
+            src={instagramLogo}
+            alt="Instagram Logo"
+            className={styles.icon}
+          />
+          <Image src={youTubeLogo} alt="YouTube Logo" className={styles.icon} />
+          <Image
+            src={facebookLogo}
+            alt="Facebook Logo"
+            className={styles.icon}
+          />
+        </div>
+      </div>
+      <div className={styles.copyrightContainer}>
+        <p className={styles.copyright}>
+          Copyright © Orthostore.com.ua - все для ортодонтії 2015 - 2024
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

@@ -8,8 +8,9 @@ const BurgerSlider = () => {
   return (
     <>
     <div className={styles.BurgerSliderContainer}>
-    <hr className={styles.customLineBurger}/>
+    
     </div>
+    <hr className={styles.customLineBurger}/>
     </>
   );
 };

@@ -8,7 +8,7 @@ $menu-item-color: rgba(52, 57, 115, 1);
 .headerContainer {
     background-color: $background-color ;
     display: flex;
-    height: 187px;
+    height: 260px;
 
 }
 
@@ -56,6 +56,8 @@ $menu-item-color: rgba(52, 57, 115, 1);
     outline: none;
     background-size: 35px;
 
+    box-shadow: 4px 4px 8px rgba(252, 168, 52, 0.5);
+
 }
 
 .contactInfo {
@@ -79,52 +81,48 @@ height: 24px;
 
 }
 
-.icon{
+.icon {
     width: 42px;
     height: 45px;
     margin-top: 62px;
-    margin-left: 87px;
-    
+    margin-left: 45px;
+
 
 }
-
-
-
 
 .menuContainer {
     display: flex;
 
 }
 
+.bergerIcon {
+    height: 19px;
+    width: 29px;
+    //////
+    margin-top: 69px;
+    margin-left: 96px;
+    ////
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.bergerIcon:hover {
+    transform: scale(1.4);
+
+}
+
+.bergerIcon:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+  }
+
 .menuItems {
     display: flex;
-}
-
-/*
-
-    
-    //position: absolute;
-   
-    
-    
-    
 
 }
 
 
-.contactInfo {
-    
-    ///////
-    margin-left: 13px;
-    ///////////
-    width: 166px;
-
-
-}
-
-
-
-.menuItems {
+.menuItem {
     font-family: 'NAMU', sans-serif;
     font-size: 24px;
     font-weight: 300;
@@ -132,12 +130,11 @@ height: 24px;
     letter-spacing: 0.1em;
     text-align: left;
     color: $menu-item-color;
-
+    margin-left: 120px;
+    margin-top: 40px;
+    
 
 }
-
-
-
 
 .customLine {
     width: 100%;
@@ -150,14 +147,4 @@ height: 24px;
     box-shadow: 0px -8px 10px 0px rgba(252, 168, 52, 1);
 }
 
-/*
-////////////////////
-   
-  top: 
-  left: 260px; 
 
-  padding: 9px 8px; 
-  gap: 10px; 
-  border-radius: 29px 0 0 0; 
-  opacity: 0; 
-*/

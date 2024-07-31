@@ -20,6 +20,7 @@ const Header = () => {
   };
 
   return (
+    <>
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer}>
         <Image src={logo} alt="Main Logo" className={styles.logoImage} />
@@ -55,15 +56,11 @@ const Header = () => {
               src={basket}
               alt="Basket Icon"
               className={styles.icon}
-              width={30}
-              height={30}
             />
             <Image
               src={userIcon}
               alt="User Icon"
               className={styles.icon}
-              width={30}
-              height={30}
             />
           </div>
         </div>
@@ -73,26 +70,24 @@ const Header = () => {
             src={bergerIcon}
             alt="berger Icon"
             className={styles.bergerIcon}
-            width={30}
-            height={30}
-
-
-            
           />
 
           <div className={styles.menuItems}>
-            <p>Про нас</p>
-            <p>Галерея</p>
-            <p>Виробник</p>
-            <p>Контакти</p>
+            <p className={styles.menuItem}>Про нас</p>
+            <p className={styles.menuItem}>Галерея</p>
+            <p className={styles.menuItem}>Виробник</p>
+            <p className={styles.menuItem}>Контакти</p>
           </div>
         </div>
+        
       </div>
 
-      {/*<hr className={styles.customLine} />*/}
+      
 
       {/*<BurgerSlider/>*/}
     </div>
+    <hr className={styles.customLine} />
+    </>
   );
 };
 

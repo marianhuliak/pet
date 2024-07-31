@@ -1,0 +1,75 @@
+$background-color: rgba(250, 243, 214, 1);
+$line-color: rgba(252, 168, 52, 1);
+$text-color: rgba(52, 57, 115, 1);
+
+
+
+.footerContainer {
+    height: 420px;
+    background-color: $background-color;
+
+}
+
+.containerData {
+    display: flex;
+}
+
+.heading {
+    font-family: 'NAMU', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33.58px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: $text-color;
+    margin-top: 40px;
+    margin-left: 80px;
+
+
+
+}
+
+.hours,
+.contactDetails {
+    font-family: 'NAMU', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: $text-color;
+    margin-top: 10px;
+    margin-left: 80px;
+
+
+}
+
+.contactDetails {
+text-decoration: underline;
+}
+
+
+
+.iconsContainer {
+    margin-top: 20px;
+    margin-left: 80px;
+
+}
+
+.icon{
+    width: 55px;
+    height: 55px;
+    margin-right: 20px;
+}
+
+.copyright {
+    font-family: 'NAMU', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 15.6px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: $text-color;
+    margin-top: 68px;
+    margin-left: 80px;
+}
