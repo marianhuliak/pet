@@ -11,22 +11,27 @@ import facebookLogo from "./images/facebookLogo.svg";
 const Footer = () => {
   return (
     <div className={styles.footerContainer}>
-        <div className={styles.containerData}>
-      <div className={styles.hoursContainer}>
-        <p className={styles.heading}>Години роботи</p>
-        <p className={styles.hours}>
-          понеділок - п'ятниця <br /> 9.00 - 18.00 <br /> прийом замовлень - ONLINE 24/7
-        </p>
-      </div>
+      <div className={styles.containerData}>
+        <div className={styles.hoursContainer}>
+          <p className={styles.heading}>Години роботи</p>
+          <p className={styles.hours}>
+            понеділок - п'ятниця <br /> 9.00 - 18.00 <br /> прийом замовлень -
+            ONLINE 24/7
+          </p>
+        </div>
 
-      <div className={styles.contactContainer}>
-        <p className={styles.heading}>Контактні дані</p>
-        <p className={styles.contactDetails}>
-          +38 050 303 94 94 <br /> +38 066 210 00 95
-        </p>
+        <div className={styles.contactContainer}>
+          <p className={styles.heading}>Контактні дані</p>
+          <div className={styles.phoneNumbers}>
+          <a href="tel:+380503039494" className={styles.contactDetails}>
+            +38 050 303 94 94
+          </a>
+          <a href="tel:+380662100095" className={styles.contactDetails}>
+            +38 066 210 00 95
+          </a>
+          </div>
+        </div>
       </div>
-      </div>
-
 
       <div className={styles.socialMediaContainer}>
         <p className={styles.heading}>Соціальні мережі</p>
