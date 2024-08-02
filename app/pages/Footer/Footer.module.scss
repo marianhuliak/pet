@@ -1,0 +1,88 @@
+$background-color: rgba(250, 243, 214, 1);
+$line-color: rgba(252, 168, 52, 1);
+$text-color: rgba(52, 57, 115, 1);
+
+
+.fullScreen {
+    display: flex;
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+.footerContainer {
+    padding: 40px 0 44px 80px;
+    background-color: $background-color;
+
+}
+
+.containerData {
+    display: flex;
+    gap: 75px;
+}
+
+.heading {
+    font-family: 'NAMU', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33.58px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: $text-color;
+
+}
+
+.socialMediaContainer {
+    margin-top: 40px;
+}
+
+.hours,
+.contactDetails {
+    font-family: 'NAMU', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: $text-color;
+
+
+
+}
+
+.contactDetails {
+    text-decoration: underline;
+}
+
+.phoneNumbers {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.iconsContainer {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+}
+
+.copyright {
+    font-family: 'NAMU', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 15.6px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: $text-color;
+    margin-top: 68px;
+}

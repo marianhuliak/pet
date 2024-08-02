@@ -1,0 +1,22 @@
+$background-color: rgba(250, 243, 214, 1);
+$line-color: rgba(252, 168, 52, 1);
+
+
+.BurgerSliderContainer {
+    height: 531px;
+    background-color: $background-color;
+
+}
+
+.customLineBurger {
+    width: 100%;
+    height: 0;
+    top: 444px;
+    gap: 0;
+    border: 1px solid $line-color;
+    opacity: 1;
+    transform: rotate(0.04deg);
+    box-shadow: 0px -8px 10px 0px rgba(252, 168, 52, 1),
+        0px 8px 10px 0px rgba(252, 168, 52, 1);
+
+}

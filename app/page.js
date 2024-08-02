@@ -1,22 +1,21 @@
-import Header from "./Header.js";
-import styles from "./page.module.css";
-import BurgerSlider from "./BurgerSlider.js";
-import PromotionalOffers from "./PromotionalOffers.js";
-import Manufacturers from "./Manufacturers.js";
-import AboutUs from "./AboutUs.js";
-import Footer from "./Footer.js";
-
+import Header from "./pages/Header/Header.js";
+import styles from "./page.module.scss";
+import BurgerSlider from "./pages/BurgerSlider/BurgerSlider.js";
+import PromotionalOffers from "./pages/PromotionalOffers/PromotionalOffers.js";
+import Manufacturers from "./pages/Manufacturers/Manufacturers.js";
+import AboutUs from "./pages/AboutUs/AboutUs.js";
+import Footer from "./pages/Footer/Footer.js";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Header/>
-      <BurgerSlider/>
-      <PromotionalOffers/>
-      <Manufacturers/>
-      <AboutUs/>
-      <Footer/>
-
+      
+      <Header />
+      <BurgerSlider />
+      <PromotionalOffers />
+      <Manufacturers />
+      <AboutUs />
+      <Footer />
       
     </main>
   );
