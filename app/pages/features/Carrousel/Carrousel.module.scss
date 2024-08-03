@@ -1,42 +1,45 @@
 .carouselContainer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-  }
-  
-  .mySwiper {
-    width: calc(100% - 80px); 
-    padding-top: 30px;
-  }
-  
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 30px;
-    height: 30px;
-    color: #000;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  }
- 
-  
-  .swiperSlide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    padding: 0 15px;
-  }
-  
-  .swiperSlide img {
-    object-fit: cover;
-    display: block;
-    border-radius: 19px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-  }
-  
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.mySwiper {
+  width: calc(100% - 80px);
+  padding-top: 30px;
+}
+
+.customPrev,
+.customNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.customPrev {
+  left: 10px;
+}
+
+.customNext {
+  right: 10px;
+}
+
+.swiperSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 0 15px;
+}
+
+.swiperSlide img {
+  object-fit: cover;
+  display: block;
+  border-radius: 19px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
