@@ -6,8 +6,9 @@ import logo from "../../images/mainLogo.svg";
 import basket from "../../images/basket.svg";
 import userIcon from "../../images/userIcon.svg";
 import styles from "./Header.module.scss";
-import BurgerMenu from "../features/BurgerMenu.js";
+import BurgerMenu from "../features/BurgerMenu/BurgerMenu.js";
 import burgerIcon from "../../images/burgerMenu.svg";
+import { AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [inputValue, setValue] = useState("");
@@ -17,7 +18,7 @@ const Header = () => {
     setValue(event.target.value);
   };
 
-  const clickHendler = () => {
+  const clickHandler = () => {
     setOpen(!isOpen);
   };
 
@@ -74,7 +75,7 @@ const Header = () => {
                   src={burgerIcon}
                   alt="burger Icon"
                   className={styles.burgerIcon}
-                  onClick={clickHendler}
+                  onClick={clickHandler}
                 />
               </div>
 
@@ -88,15 +89,12 @@ const Header = () => {
           </div>
         </div>
       </div>
-        
-      <div className="slide-in">
-      {isOpen && <BurgerMenu />}
-      </div>
       
-  
       
+
+      <AnimatePresence>{isOpen && <BurgerMenu />}</AnimatePresence>
+
       <hr className={styles.customLine} />
-      
     </header>
   );
 };

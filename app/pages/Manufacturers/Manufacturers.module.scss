@@ -12,8 +12,8 @@ $text-color: rgba(52, 57, 115, 1);
 }
 
 .manufacturersContainer {
-    height: 388.5px;
     background-color: $background-color;
+    padding: 40px 8px 95px 8px;
 
 }
 
@@ -24,9 +24,8 @@ $text-color: rgba(52, 57, 115, 1);
     line-height: 24px;
     letter-spacing: 0.1em;
     text-align: left;
-    padding-top: 40px;
-    margin-left: 80px;
     color: $text-color;
+    margin-left: 72px;
 }
 
 .customLineManufacturers {
