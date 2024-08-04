@@ -11,21 +11,13 @@ $text-color: rgba(52, 57, 115, 1);
 
 }
 
-.promotionalOffers {
-    // Встановіть position relative або absolute, якщо потрібно
-    position: relative; 
-    overflow: hidden; // Переконайтеся, що це не конфліктує з анімацією
-    will-change: opacity, transform;
-  }
 
 .promotionalOffersContainer {
     padding: 40px 8px 95px 8px;
 }
 
 .promotionalOffersContainer {
-    ///
-    height: 531px;
-    ///
+    
     background-color: $background-color;
 
 }

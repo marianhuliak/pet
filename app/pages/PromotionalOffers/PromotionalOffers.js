@@ -49,15 +49,16 @@ const offersVariants = {
 const PromotionalOffers = () => {
   return (
     <>
-      <div className={styles.promotionalOffersContainer}>
-        <div className={styles.fullScreen}>
-          <motion.section
+     <motion.section
             className={styles.promotionalOffers}
-            initial="hidden" // Початковий стан
-            whileInView="visible" // Стан при появі в області видимості
-            viewport={{ amount: 0.4 }} // Анімація при видимості
+            initial="hidden" 
+            whileInView="visible" 
+            viewport={{ amount: 0.4 }} 
             variants={offersVariants}
           >
+      <div className={styles.promotionalOffersContainer}>
+        <div className={styles.fullScreen}>
+         
             <div>
               <p className={styles.promotionalOffersText}>Акційні пропозиції</p>
             </div>
@@ -69,10 +70,11 @@ const PromotionalOffers = () => {
                 imageSpacing={30}
               />
             </div>
-          </motion.section>
+          
         </div>
       </div>
       <hr className={styles.customLinePromotionalOffers} />
+      </motion.section>
     </>
   );
 };

@@ -43,36 +43,38 @@ const imagesLarge = [
 ];
 
 const manufacturersVariants = {
-  hidden: { opacity: 0, y: -100 }, // Непомітний стан
+  hidden: { opacity: 0, y: -100 }, 
   visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } }, // Видимий стан
 };
 const Manufacturers = () => {
   return (
     <>
-      <div className={styles.manufacturersContainer}>
-        <div className={styles.fullScreen}>
-          <div>
-            <p className={styles.manufacturersText}>Виробники</p>
-          </div>
-          <div lassName={styles.galleryCntainer}>
-            <motion.section
+     <motion.section
               className={styles.manufacturers}
               initial="hidden" // Початковий стан
               whileInView="visible" // Стан при появі в області видимості
               viewport={{ amount: 0.4 }} // Анімація при видимості
               variants={manufacturersVariants}
             >
+      <div className={styles.manufacturersContainer}>
+        <div className={styles.fullScreen}>
+          <div>
+            <p className={styles.manufacturersText}>Виробники</p>
+          </div>
+          <div lassName={styles.galleryCntainer}>
+           
               <Carrousel
                 images={imagesLarge}
                 imageWidth="200px"
                 imageHeight="200px"
                 imageSpacing={12}
               />
-            </motion.section>
+            
           </div>
         </div>
       </div>
       <hr className={styles.customLineManufacturers} />
+      </motion.section>
     </>
   );
 };

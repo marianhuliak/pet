@@ -5,9 +5,11 @@ import Image from "next/image";
 import styles from "./BurgerSlider.module.scss";
 import { color } from "framer-motion";
 
+
 const BurgerSlider = () => {
   return (
     <>
+    
       <div className={styles.BurgerSliderContainer}>
       </div>
       <hr className={styles.customLineBurger} />

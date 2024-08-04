@@ -4,6 +4,545 @@ $line-color: rgba(252, 168, 52, 1);
 $input-color: rgba(0, 0, 0, 0.25);
 
 
+.fullScreen {
+    display: flex;
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.headerContainer {
+    background-color: $background-color;
+    display: flex;
+    padding: 20px 40px 23px 47px;
+    position: relative;
+    z-index: 10;
+}
+
+.logoImage {
+    width: 110px;
+    height: 40px;
+}
+
+.headerLogoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.logoText {
+    font-family: 'NAMU', sans-serif;
+    font-size: 25px;
+    color: $main-font-color;
+    text-align: center;
+}
+
+.searchAndInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchAndMenuContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 67px;
+}
+
+.endOfContainer {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.searchInput {
+    background-color: $input-color;
+    width: 194px;
+    height: 39px;
+    border-radius: 29px;
+    border: none;
+    padding: 9px 8px 9px 45px;
+    background-image: url('../../images/searchLight.svg');
+    background-repeat: no-repeat;
+    background-position: 4px;
+    outline: none;
+    background-size: 35px;
+    transition: box-shadow 0.3s ease;
+}
+
+.searchInput::placeholder {
+    font-family: 'NAMU', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.searchInput:hover {
+    box-shadow: 4px 4px 8px rgba(252, 168, 52, 0.5);
+}
+
+.secondContactInfo {
+    padding-top: 10px;
+}
+
+.contactInfo {
+    color: $main-font-color;
+    font-family: 'NAMU', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.icon {
+    width: 36px;
+    height: 33px;
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.menuContainer {
+    display: flex;
+    width: 100%;
+}
+
+.burgerIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.burgerIcon {
+    height: 16px;
+    width: 26px;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 43px 4px 21px;
+}
+
+.burgerIcon:hover {
+    transform: scale(1.4);
+}
+
+.burgerIcon:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
+}
+
+.menuItems {
+    display: flex;
+    gap: 50px;
+    align-items: flex-end;
+}
+
+.menuItem {
+    list-style: none;
+    font-family: 'NAMU', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: $main-font-color;
+    margin-top: 61px;
+}
+
+.customLine {
+    width: 100%;
+    height: 0;
+    gap: 0;
+    border: 1px solid $background-color;
+    opacity: 1;
+    transform: rotate(0.04deg);
+    box-shadow: 0px 5px 10px 0px $background-color;
+}
+
+
+@media (max-width: 1025px) {
+    .headerContainer {
+      padding: 20px 30px 23px 30px;
+    }
+  
+    .logoImage {
+      width: 90px;
+      height: 30px;
+    }
+  
+    .logoText {
+      font-size: 18px;
+    }
+  
+    .searchAndMenuContainer {
+      margin-left: 50px;
+    }
+  
+    .endOfContainer {
+      gap: 10px;
+    }
+  
+    .searchInput {
+      width: 150px;
+      height: 30px;
+      padding: 8px 7px 8px 35px;
+      background-size: 25px;
+    }
+  
+    .searchInput::placeholder {
+      font-size: 12px;
+    }
+  
+    .secondContactInfo {
+      padding-top: 8px;
+    }
+  
+    .contactInfo {
+      font-size: 16px;
+    }
+  
+    .icon {
+      width: 30px;
+      height: 28px;
+    }
+  
+    .iconsContainer {
+      gap: 8px;
+    }
+  
+    .burgerIcon {
+      height: 14px;
+      width: 20px;
+      margin: 0 30px 3px 20px;
+    }
+  
+    .menuItems {
+      gap: 40px;
+    }
+  
+    .menuItem {
+        font-size: 16px;
+      margin-top: 50px;
+    }
+  }
+  
+  @media (max-width: 795px) {
+    .headerContainer {
+      padding: 10px 15px 12px 15px;
+    }
+  
+    .logoImage {
+      width: 60px;
+      height: 22px;
+    }
+  
+    .logoText {
+      font-size: 14px;
+    }
+  
+    .searchAndMenuContainer {
+      margin-left: 20px;
+    }
+  
+    .endOfContainer {
+      gap: 6px;
+    }
+  
+    .searchInput {
+      width: 90px;
+      height: 20px;
+      padding: 6px 5px 6px 20px;
+      background-size: 15px;
+    }
+  
+    .searchInput::placeholder {
+      font-size: 9px;
+    }
+  
+    .secondContactInfo {
+      padding-top: 5px;
+    }
+  
+    .contactInfo {
+      font-size: 13px;
+    }
+  
+    .icon {
+      width: 22px;
+      height: 20px;
+    }
+  
+    .iconsContainer {
+      gap: 5px;
+    }
+  
+    .burgerIcon {
+      height: 11px;
+      width: 16px;
+      margin: 0 15px 1px 10px;
+    }
+  
+    .menuItems {
+      gap: 25px;
+    }
+  
+    .menuItem {
+      font-size: 13px;
+      margin-top: 35px;
+    }
+  }
+  
+
+  @media (max-width: 566px) {
+    .headerContainer {
+      padding: 8px 10px 10px 10px;
+    }
+  
+    .logoImage {
+      width: 50px;
+      height: 18px;
+    }
+  
+    .logoText {
+      font-size: 12px;
+    }
+  
+    .searchAndMenuContainer {
+      margin-left: 15px;
+    }
+  
+    .endOfContainer {
+      gap: 5px;
+    }
+  
+    .searchInput {
+      width: 70px;
+      height: 18px;
+      padding: 5px 4px 5px 15px;
+      background-size: 12px;
+    }
+  
+    .searchInput::placeholder {
+      font-size: 7px;
+    }
+  
+    .secondContactInfo {
+      padding-top: 3px;
+    }
+  
+    .contactInfo {
+      font-size: 10px;
+    }
+  
+    .icon {
+      width: 18px;
+      height: 16px;
+    }
+  
+    .iconsContainer {
+      gap: 3px;
+    }
+  
+    .burgerIcon {
+      height: 9px;
+      width: 14px;
+      margin: 0 12px 1px 8px;
+    }
+  
+    .menuItems {
+      gap: 15px;
+    }
+  
+    .menuItem {
+      font-size: 10px;
+      margin-top: 25px;
+    }
+  }
+   
+
+
+
+@media (max-width: 480px) {
+
+    .headerContainer {
+        padding: 15px 15px 9px 15px;
+       
+    }
+    
+    .logoImage {
+        width: 50px;
+        height: 20px;
+    }
+
+    .logoText {
+        font-size: 10px;
+
+    }
+
+    .searchAndMenuContainer {
+        margin-left: 20px;
+    }
+
+
+    .endOfContainer {
+        gap: 12px;
+        margin-top: 0;
+    }
+
+    .searchInput {
+        width: 62px;
+        height: 16px;
+        padding: 3px 3px 6px 18px;
+        background-size: 11px;
+    }
+
+    .searchInput::placeholder {
+        font-size: 6px;
+    }
+
+    .secondContactInfo {
+        padding-top: 1px;
+        
+    }
+
+    .contactInfo {
+        font-size: 6px;
+        ///
+        line-height: 10px;
+        ///
+        letter-spacing: 0.1em;
+    }
+
+    .icon {
+        width: 16px;
+        height: 13px;
+    }
+
+    .iconsContainer {
+        gap: 5px;
+    }
+
+    .burgerIcon {
+        height: 10px;
+        width: 6px;
+        margin: 0 15px 0px 0px;
+    
+    
+    }
+
+    .menuItems {
+        gap: 15px;
+        
+    }
+
+
+    .menuItem {
+        font-size: 6px;
+        line-height: 7px;
+        margin-top: 23px;
+    }
+    
+}
+
+
+
+    /*
+@media (max-width: 320px) {
+    .headerContainer {
+        padding: 15px 15px 0 15px;
+    }
+
+    .logoImage {
+        width: 50px;
+        height: 20px;
+    }
+
+
+
+
+    .logoText {
+        font-size: 10px;
+    }
+
+    .searchInput {
+        width: 62px;
+        height: 16px;
+        padding: 3px 3px 6px 18px;
+        background-size: 12px;
+    }
+
+    .searchInput::placeholder {
+        font-size: 6px;
+
+    }
+
+    .contactInfo {
+        display: flex;
+
+        font-size: 6px;
+        margin-left: 20px;
+
+    }
+
+    .secondContactInfo {
+        padding-top: 0;
+        line-height: 0;
+    }
+
+  
+
+    .menuItems {
+        gap: 15px;
+    }
+
+    .menuItem {
+        font-size: 6px;
+        line-height: auto;
+        margin-top: 12px;
+    }
+
+    .endOfContainer {
+        display: flex;
+        margin-top: 0;
+    }
+
+    .burgerIconContainer {
+        margin: 0 15px 0 20px;
+        width: auto;
+    }
+
+    .burgerIcon {
+        height: 10px;
+        width: 6px;
+        line-height: auto;
+    }
+
+    .icon {
+        width: 16px;
+        height: 13px;
+    }
+
+    .menuContainer {
+
+    }
+}
+
+
+/*
+
+$background-color: rgb(52, 57, 115);
+$main-font-color: rgba(217, 217, 217, 1);
+$line-color: rgba(252, 168, 52, 1);
+$input-color: rgba(0, 0, 0, 0.25);
+
+
 
 
 
@@ -193,5 +732,7 @@ $input-color: rgba(0, 0, 0, 0.25);
     opacity: 1;
     transform: rotate(0.04deg);
     box-shadow: 0px 5px 10px 0px $background-color;
-    z-index: 10000;
+   
 }
+
+*/

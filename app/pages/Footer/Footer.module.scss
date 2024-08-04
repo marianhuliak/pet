@@ -2,87 +2,300 @@ $background-color: rgba(250, 243, 214, 1);
 $line-color: rgba(252, 168, 52, 1);
 $text-color: rgba(52, 57, 115, 1);
 
-
 .fullScreen {
-    display: flex;
-    z-index: 10;
-    max-width: 1280px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-
+  display: flex;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-
 .footerContainer {
-    padding: 40px 0 44px 80px;
-    background-color: $background-color;
-
+  padding: 40px 0 44px 80px;
+  background-color: $background-color;
 }
 
 .containerData {
-    display: flex;
-    gap: 75px;
+  display: flex;
+  gap: 75px;
 }
 
 .heading {
-    font-family: 'NAMU', sans-serif;
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 33.58px;
-    letter-spacing: 0.06em;
-    text-align: left;
-    color: $text-color;
-
+  font-family: 'NAMU', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 33.58px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: $text-color;
 }
 
 .socialMediaContainer {
-    margin-top: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .hours,
 .contactDetails {
-    font-family: 'NAMU', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0.1em;
-    text-align: left;
-    color: $text-color;
-
-
-
+  font-family: 'NAMU', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: $text-color;
 }
 
 .contactDetails {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .phoneNumbers {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+.hoursContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
 .iconsContainer {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .icon {
-    width: 55px;
-    height: 55px;
+  width: 55px;
+  height: 55px;
 }
 
 .copyright {
-    font-family: 'NAMU', sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 15.6px;
-    letter-spacing: 0.1em;
-    text-align: left;
-    color: $text-color;
-    margin-top: 68px;
+  font-family: 'NAMU', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 15.6px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: $text-color;
+  margin-top: 68px;
+}
+
+@media (max-width: 1025px) {
+  .footerContainer {
+    padding: 30px 0 35px 60px;
+  }
+
+  .containerData {
+    gap: 60px;
+  }
+
+  .heading {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .socialMediaContainer {
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .hours,
+  .contactDetails {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .phoneNumbers {
+    gap: 8px;
+  }
+
+  .hoursContainer, .contactContainer {
+    gap: 8px;
+  }
+
+  .iconsContainer {
+    gap: 18px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    padding: 20px 0 30px 40px;
+  }
+
+  .containerData {
+    gap: 45px;
+  }
+
+  .heading {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .socialMediaContainer {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .hours,
+  .contactDetails {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .phoneNumbers {
+    gap: 6px;
+  }
+
+  .hoursContainer, .contactContainer {
+    gap: 6px;
+  }
+
+  .iconsContainer {
+    gap: 16px;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .copyright {
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 566px) {
+  .footerContainer {
+    padding: 15px 0 20px 30px;
+  }
+
+  .containerData {
+    gap: 35px;
+  }
+
+  .heading {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .socialMediaContainer {
+    margin-top: 15px;
+    gap: 8px;
+  }
+
+  .hours,
+  .contactDetails {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .phoneNumbers {
+    gap: 5px;
+  }
+
+  .hoursContainer, .contactContainer {
+    gap: 5px;
+  }
+
+  .iconsContainer {
+    gap: 14px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .copyright {
+    font-size: 8px;
+    line-height: 10px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+
+ 
+    
+    .footerContainer {
+        padding: 30px 0 11px 20px;
+    }
+    
+    .containerData {
+        gap: 31px;
+    }
+    
+    .heading {
+        font-size: 10px;
+        line-height: 2;
+        
+    
+    }
+    
+    .socialMediaContainer {
+        margin-top: 20px;
+        gap: 10px;
+    
+    }
+    
+    .hours,
+    .contactDetails {
+        font-size: 6px; 
+        line-height: 1;
+
+    }
+    
+    
+    
+    .phoneNumbers {
+        gap: 5px;
+    }
+    
+    .hoursContainer, .contactContainer {
+        gap: 5px;
+    }
+    
+    
+    .iconsContainer {
+        gap: 13px;
+    }
+    
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .copyright {
+        font-size: 6px;
+        line-height: normal;
+        margin-top: 30px;
+    }
+
+
 }

@@ -6,10 +6,24 @@ import styles from "./Footer.module.scss";
 import instagramLogo from "../../images/instagramLogo.svg";
 import youTubeLogo from "../../images/youTubeLogo.svg";
 import facebookLogo from "../../images/facebookLogo.svg";
+import { motion } from "framer-motion";
+
+const footerVariants = {
+  hidden: { opacity: 0, y: -100 },  // Непомітний стан
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } },  // Видимий стан
+};
+
 
 const Footer = () => {
   return (
     <footer>
+       <motion.footer
+      className={styles.footer}
+      initial="hidden"  
+      whileInView="visible"  
+      viewport={{ amount: 0.4 }}  
+      variants={footerVariants}
+    >
       <div className={styles.footerContainer}>
         <div className={styles.fullScreen}>
           <div>
@@ -63,6 +77,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      </motion.footer>
     </footer>
   );
 };

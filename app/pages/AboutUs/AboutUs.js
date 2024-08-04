@@ -1,21 +1,37 @@
 "use client";
 
 import React from "react";
-import ToothModel from "../../pages/features/ToothModel/ToothModel";
+import ToothModel from "../features/ToothModel/ToothModel";
 import styles from "./AboutUs.module.scss";
+import { motion } from "framer-motion";
+
+const aboutUsVariants = {
+  hidden: { opacity: 0, y: -100 },  
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } },  
+};
+
 
 const AboutUs = () => {
   return (
     <>
+      <motion.section
+      className={styles.aboutUs}
+      initial="hidden"  
+      whileInView="visible"  
+      viewport={{ amount: 0.4 }}  
+      variants={aboutUsVariants}
+    >
       <div className={styles.AboutUsContainer}>
         <div className={styles.fullScreen}>
           <div className={styles.header}>
             <p className={styles.title}>Про нас</p>
           </div>
+          
 
           <div className={styles.infoContainer}>
             <div className={styles.infoItem}>
               <div className={styles.imageContainer}>
+              <ToothModel />
                 
 
 
@@ -37,7 +53,7 @@ const AboutUs = () => {
                 
                 
 
-                
+
               </div>
               <p className={styles.infoText}>
                 Постачаємо високоякісну ортодонтичну продукцію відомих <br />{" "}
@@ -49,6 +65,7 @@ const AboutUs = () => {
         </div>
       </div>
       <hr className={styles.customLineAboutUs} />
+      </motion.section>
     </>
   );
 };
