@@ -14,13 +14,14 @@ const aboutUsVariants = {
 const AboutUs = () => {
   return (
     <>
-      <motion.section
+     {/* <motion.section
       className={styles.aboutUs}
       initial="hidden"  
       whileInView="visible"  
       viewport={{ amount: 0.4 }}  
       variants={aboutUsVariants}
-    >
+    >  */}
+      <hr className={styles.customLineAboutUs} />
       <div className={styles.AboutUsContainer}>
         <div className={styles.fullScreen}>
           <div className={styles.header}>
@@ -41,7 +42,7 @@ const AboutUs = () => {
             <div className={styles.infoItem}>
               <div className={styles.imageContainer}>
                 
-                
+              
 
               </div>
               <p className={styles.infoText}>
@@ -64,8 +65,8 @@ const AboutUs = () => {
           <div className={styles.fullScreen}></div>
         </div>
       </div>
-      <hr className={styles.customLineAboutUs} />
-      </motion.section>
+      
+      {/*  </motion.section>  */}
     </>
   );
 };

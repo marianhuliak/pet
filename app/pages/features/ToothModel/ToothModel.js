@@ -14,17 +14,16 @@ function Tooth3D() {
     }
   });
 
-  return <primitive object={fbx} ref={ref} />;
+  return <primitive object={fbx} ref={ref} scale={[0.05, 0.05, 0.05]} />;
 }
 
 export default function ToothModel() {
   return (
     <div className={styles.toothModelContainer}>
-      <Canvas camera={{ position: [0, 0, 5] }} className={styles.toothCanvas}>
+      <Canvas camera={{ position: [0, 0, 10] }} className={styles.toothCanvas}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[0, 0, 5]} />
         <Tooth3D />
-        <OrbitControls enableZoom={false} />
       </Canvas>
     </div>
   );

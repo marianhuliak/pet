@@ -13,11 +13,8 @@ $text-color: rgba(52, 57, 115, 1);
 .AboutUsContainer {
     padding: 41px 0 91px 80px;
     background-color: $background-color;
-
+    height: 100vh;
 }
-
-
-
 
 
 .tooth {
@@ -40,6 +37,7 @@ $text-color: rgba(52, 57, 115, 1);
 .infoItem {
     display: flex;
     padding-top: 48px;
+    gap: 20px;
 
 }
 
@@ -78,20 +76,6 @@ $text-color: rgba(52, 57, 115, 1);
 
 }
 
-/*
-.subTitle {
-    font-family: 'NAMU', sans-serif;
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 33.6px;
-    letter-spacing: 0.1em;
-    text-align: left;
-    color: $text-color;
-    text-shadow: 0 0 4px $text-color;
-    margin-top: 40px;
-    margin-left: 582.45px;
-}
-*/
 
 .customLineAboutUs {
     width: 100%;

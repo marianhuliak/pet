@@ -44,18 +44,19 @@ const imagesLarge = [
 
 const manufacturersVariants = {
   hidden: { opacity: 0, y: -100 }, 
-  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } }, // Видимий стан
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } }, 
 };
 const Manufacturers = () => {
   return (
     <>
-     <motion.section
+    {/*   <motion.section
               className={styles.manufacturers}
-              initial="hidden" // Початковий стан
-              whileInView="visible" // Стан при появі в області видимості
-              viewport={{ amount: 0.4 }} // Анімація при видимості
+              initial="hidden" 
+              whileInView="visible" 
+              viewport={{ amount: 0.4 }} 
               variants={manufacturersVariants}
-            >
+            >  */}
+              <hr className={styles.customLineManufacturers} />
       <div className={styles.manufacturersContainer}>
         <div className={styles.fullScreen}>
           <div>
@@ -73,8 +74,8 @@ const Manufacturers = () => {
           </div>
         </div>
       </div>
-      <hr className={styles.customLineManufacturers} />
-      </motion.section>
+      
+     {/*   </motion.section>   */}
     </>
   );
 };

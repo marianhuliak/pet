@@ -30,7 +30,7 @@ const Carrousel = ({ images, imageWidth, imageHeight, imageSpacing }) => {
         centeredSlides={false}
         loop={true}
         autoplay={{
-          delay: 10000,
+          delay: 3000,
         }}
         modules={[Navigation, Autoplay]}
         className={styles.mySwiper}

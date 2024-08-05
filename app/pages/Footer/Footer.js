@@ -9,24 +9,25 @@ import facebookLogo from "../../images/facebookLogo.svg";
 import { motion } from "framer-motion";
 
 const footerVariants = {
-  hidden: { opacity: 0, y: -100 },  // Непомітний стан
-  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } },  // Видимий стан
+  hidden: { opacity: 0, y: -100 },  
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } }, 
 };
 
 
 const Footer = () => {
   return (
     <footer>
-       <motion.footer
+       {/* <motion.footer
       className={styles.footer}
       initial="hidden"  
       whileInView="visible"  
       viewport={{ amount: 0.4 }}  
       variants={footerVariants}
-    >
+    >  */}
+      <hr className={styles.customLineFooter} />
       <div className={styles.footerContainer}>
         <div className={styles.fullScreen}>
-          <div>
+          <div >
             <div className={styles.containerData}>
               <div className={styles.hoursContainer}>
                 <p className={styles.heading}>Години роботи</p>
@@ -77,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      </motion.footer>
+     {/*   </motion.footer> */}
     </footer>
   );
 };

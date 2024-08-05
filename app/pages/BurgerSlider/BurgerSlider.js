@@ -12,7 +12,7 @@ const BurgerSlider = () => {
     
       <div className={styles.BurgerSliderContainer}>
       </div>
-      <hr className={styles.customLineBurger} />
+      {/*<hr className={styles.customLineBurger} />*/}
     </>
   );
 };
