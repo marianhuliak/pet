@@ -14,13 +14,13 @@ const aboutUsVariants = {
 const AboutUs = () => {
   return (
     <>
-     {/* <motion.section
+      <motion.section
       className={styles.aboutUs}
       initial="hidden"  
       whileInView="visible"  
       viewport={{ amount: 0.4 }}  
       variants={aboutUsVariants}
-    >  */}
+    >  
       <hr className={styles.customLineAboutUs} />
       <div className={styles.AboutUsContainer}>
         <div className={styles.fullScreen}>
@@ -32,8 +32,9 @@ const AboutUs = () => {
           <div className={styles.infoContainer}>
             <div className={styles.infoItem}>
               <div className={styles.imageContainer}>
-              <ToothModel />
-                
+              
+              <ToothModel id="1"  />
+       
 
 
               </div>
@@ -42,8 +43,9 @@ const AboutUs = () => {
             <div className={styles.infoItem}>
               <div className={styles.imageContainer}>
                 
+              <ToothModel id="2"  />
               
-
+       
               </div>
               <p className={styles.infoText}>
                 Займаємо лідируючі позиції на вітчизняному ринку ортодонтії
@@ -52,7 +54,7 @@ const AboutUs = () => {
             <div className={styles.infoItem}>
               <div className={styles.imageContainer}>
                 
-                
+              <ToothModel id="3"  />
 
 
               </div>
@@ -66,7 +68,7 @@ const AboutUs = () => {
         </div>
       </div>
       
-      {/*  </motion.section>  */}
+       </motion.section>  
     </>
   );
 };

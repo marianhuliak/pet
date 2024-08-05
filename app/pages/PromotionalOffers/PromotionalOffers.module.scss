@@ -49,3 +49,11 @@ $text-color: rgba(52, 57, 115, 1);
         0px 8px 10px 0px rgba(252, 168, 52, 1);
 
 }
+
+
+@media (min-width: 800px) {
+
+    .promotionalOffersContainer {
+        height: 80vh;
+    }
+}

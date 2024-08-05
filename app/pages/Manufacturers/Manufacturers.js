@@ -9,73 +9,59 @@ import { motion } from "framer-motion";
 
 const imagesLarge = [
   {
-    src: "https://storage.googleapis.com/pod_public/1300/169106.jpg",
+    src: "https://orthostore.com.ua/image/cache/catalog/manufacturer/part4-205x220.jpg",
     alt: "Large Image 1",
   },
   {
-    src: "https://hips.hearstapps.com/hmg-prod/images/rabbit-breeds-american-white-1553635287.jpg?crop=0.976xw:0.651xh;0.0242xw,0.291xh&resize=980:*",
-    alt: "Large Image 2",
-  },
-  {
-    src: "https://static.wixstatic.com/media/nsplsh_37d29875d2fc48e0bdc1baeed3e07156~mv2.jpg/v1/fit/w_320%2Ch_1000%2Cal_c%2Cq_80,enc_auto/file.jpg",
+    src: "https://orthostore.com.ua/image/cache/catalog/proizvoditeli/logo_top-205x220.gif",
     alt: "Large Image 3",
   },
   {
-    src: "https://static.wixstatic.com/media/nsplsh_37d29875d2fc48e0bdc1baeed3e07156~mv2.jpg/v1/fit/w_320%2Ch_1000%2Cal_c%2Cq_80,enc_auto/file.jpg",
-    alt: "Large Image 4",
-  },
-  {
-    src: "https://storage.googleapis.com/pod_public/1300/169106.jpg",
+    src: "https://orthostore.com.ua/image/cache/catalog/proizvoditeli/opro-logo-web-300x240-205x220.jpg",
     alt: "Large Image 1",
   },
   {
-    src: "https://hips.hearstapps.com/hmg-prod/images/rabbit-breeds-american-white-1553635287.jpg?crop=0.976xw:0.651xh;0.0242xw,0.291xh&resize=980:*",
-    alt: "Large Image 2",
+    src: "https://orthostore.com.ua/image/cache/catalog/proizvoditeli/biodinamicalogo-205x220.jpg",
+    alt: "Large Image 1",
   },
   {
-    src: "https://static.wixstatic.com/media/nsplsh_37d29875d2fc48e0bdc1baeed3e07156~mv2.jpg/v1/fit/w_320%2Ch_1000%2Cal_c%2Cq_80,enc_auto/file.jpg",
+    src: "https://orthostore.com.ua/image/cache/catalog/proizvoditeli/images%281%29-205x220.png",
     alt: "Large Image 3",
-  },
-  {
-    src: "https://static.wixstatic.com/media/nsplsh_37d29875d2fc48e0bdc1baeed3e07156~mv2.jpg/v1/fit/w_320%2Ch_1000%2Cal_c%2Cq_80,enc_auto/file.jpg",
-    alt: "Large Image 4",
-  },
+  }
 ];
 
+
 const manufacturersVariants = {
-  hidden: { opacity: 0, y: -100 }, 
-  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } }, 
+  hidden: { opacity: 0, y: -100 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 3.5 } },
 };
 const Manufacturers = () => {
   return (
     <>
-    {/*   <motion.section
-              className={styles.manufacturers}
-              initial="hidden" 
-              whileInView="visible" 
-              viewport={{ amount: 0.4 }} 
-              variants={manufacturersVariants}
-            >  */}
-              <hr className={styles.customLineManufacturers} />
-      <div className={styles.manufacturersContainer}>
-        <div className={styles.fullScreen}>
-          <div>
-            <p className={styles.manufacturersText}>Виробники</p>
-          </div>
-          <div lassName={styles.galleryCntainer}>
-           
+      <motion.section
+        className={styles.manufacturers}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.4 }}
+        variants={manufacturersVariants}
+      >
+        <hr className={styles.customLineManufacturers} />
+        <div className={styles.manufacturersContainer}>
+          <div className={styles.fullScreen}>
+            <div>
+              <p className={styles.manufacturersText}>Виробники</p>
+            </div>
+            <div lassName={styles.galleryCntainer}>
               <Carrousel
                 images={imagesLarge}
                 imageWidth="200px"
                 imageHeight="200px"
                 imageSpacing={12}
               />
-            
+            </div>
           </div>
         </div>
-      </div>
-      
-     {/*   </motion.section>   */}
+      </motion.section>
     </>
   );
 };

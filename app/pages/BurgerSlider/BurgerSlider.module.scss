@@ -1,10 +1,22 @@
 $background-color: rgba(250, 243, 214, 1);
 $line-color: rgba(252, 168, 52, 1);
 
+.fullScreen {
+    display: flex;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 
 .BurgerSliderContainer {
     height: 100vh;
     background-color: $background-color;
+    width: 100%;
+    display: flex;
+    align-items: flex-end
 
 }
 
@@ -20,3 +32,24 @@ $line-color: rgba(252, 168, 52, 1);
         0px 8px 10px 0px rgba(252, 168, 52, 1);
 
 }
+
+.mySwiper {
+
+
+
+
+
+
+}
+  
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+  }
+  

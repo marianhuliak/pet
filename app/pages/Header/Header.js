@@ -10,7 +10,7 @@ import BurgerMenu from "../features/BurgerMenu/BurgerMenu.js";
 import burgerIcon from "../../images/burgerMenu.svg";
 import { AnimatePresence } from "framer-motion";
 
-const Header = ({ className }) => {
+const Header = () => {
   const [inputValue, setValue] = useState("");
   const [isOpen, setOpen] = useState(false);
 
@@ -23,7 +23,7 @@ const Header = ({ className }) => {
   };
 
   return (
-    <header className={className}>
+    <header>
       <div className={styles.headerContainer}>
         <div className={styles.fullScreen}>
           <div className={styles.headerLogoContainer}>
