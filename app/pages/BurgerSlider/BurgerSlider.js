@@ -14,6 +14,8 @@ import photo3 from "../../images/slideshow/05-1920x755.jpg";
 import photo4 from "../../images/slideshow/banner-1920x755.jpg";
 import photo5 from "../../images/slideshow/banner-nadijnist-sajt-1920x755.jpg";
 
+import imagesList from "./images";
+
 
 
 const BurgerSlider = () => {
@@ -31,7 +33,7 @@ const BurgerSlider = () => {
         >
           <SwiperSlide>
             <Image
-              src={photo1}
+              src={photo1}ß
               alt="Photo 1"
               style={{ width: "100%", height: "auto" }}
             />

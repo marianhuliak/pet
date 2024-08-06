@@ -29,13 +29,10 @@ const Header = () => {
       setIsScreenWide(window.innerWidth > 730);
     };
 
-    // Initial check
     handleResize();
 
-    // Add event listener
     window.addEventListener("resize", handleResize);
 
-    // Cleanup on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
