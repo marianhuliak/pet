@@ -1,0 +1,91 @@
+$title-color: rgba(52, 57, 115, 1);
+$details-color: rgba(53, 53, 53, 1);
+$background-color: white;
+
+.fullScreen {
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.burgerMenuContainer {
+    position: absolute;
+    z-index: 11;
+    display: flex;
+    max-width: 1103px;
+    height: auto;
+    opacity: 1;
+    background-color: $background-color;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 122px 0 55px;
+    padding: 31px 0 39px 12px;
+    box-shadow: 0px 4px 7.3px 0px rgba(252, 168, 52, 0.5);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.title {
+    color: $title-color;
+    font-family: 'NAMU', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.details {
+    color: $details-color;
+    font-family: 'NAMU', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19.2px;
+    text-align: left;
+    padding-bottom: 10px;
+    list-style: none;
+    cursor: pointer;
+    transition: text-decoration 0.2s ease; // Додаємо перехід для анімації
+}
+
+.details:focus,
+.details:active {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.sectionOne {
+    padding: 0 18px 0 18px;
+    border-right: 1px solid $title-color;
+}
+
+.sectionTwo {
+    padding: 0 18px 0 18px;
+}
+
+.sectionThree {
+    padding: 0 18px 0 18px;
+    border-right: 1px solid $title-color;
+    flex: 1;
+}
+
+.sectionFour,
+.sectionFive {
+    padding: 0 18px 0 18px;
+    flex: 1;
+}
+
+.sectionSix {
+    padding: 0 18px 0 18px;
+    border-left: 1px solid $title-color;
+}
+
+.sectionOneContainer {
+    flex: 1;
+}

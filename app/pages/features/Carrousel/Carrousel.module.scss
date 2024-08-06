@@ -1,0 +1,46 @@
+.carouselContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.mySwiper {
+  width: calc(100% - 80px);
+  padding-top: 30px;
+  padding-bottom: 11px;
+}
+
+.customPrev,
+.customNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.customPrev {
+  left: 10px;
+}
+
+.customNext {
+  right: 10px;
+}
+
+.swiperSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 0 15px;
+}
+
+.swiperSlide img {
+  object-fit: cover;
+  display: block;
+  border-radius: 19px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
