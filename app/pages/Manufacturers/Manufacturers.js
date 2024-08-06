@@ -3,35 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./Manufacturers.module.scss";
-import canvas from "../../images/smallWhiteCanvas.svg";
 import Carrousel from "../../pages/features/Carrousel/Carrousel.js";
 import { motion } from "framer-motion";
+import imagesList from "./images"; 
 
 
-
-
-const imagesLarge = [
-  {
-    src: "https://orthostore.com.ua/image/cache/catalog/manufacturer/part4-205x220.jpg",
-    alt: "Large Image 1",
-  },
-  {
-    src: "https://orthostore.com.ua/image/cache/catalog/proizvoditeli/logo_top-205x220.gif",
-    alt: "Large Image 3",
-  },
-  {
-    src: "https://orthostore.com.ua/image/cache/catalog/proizvoditeli/opro-logo-web-300x240-205x220.jpg",
-    alt: "Large Image 1",
-  },
-  {
-    src: "https://orthostore.com.ua/image/cache/catalog/proizvoditeli/biodinamicalogo-205x220.jpg",
-    alt: "Large Image 1",
-  },
-  {
-    src: "https://orthostore.com.ua/image/cache/catalog/proizvoditeli/images%281%29-205x220.png",
-    alt: "Large Image 3",
-  }
-];
 
 
 const manufacturersVariants = {
@@ -57,7 +33,7 @@ const Manufacturers = () => {
             </div>
             <div lassName={styles.galleryCntainer}>
               <Carrousel
-                images={imagesLarge}
+                images={imagesList}
                 imageWidth="200px"
                 imageHeight="200px"
                 imageSpacing={12}

@@ -14,6 +14,7 @@ import { AnimatePresence } from "framer-motion";
 const Header = () => {
   const [inputValue, setValue] = useState("");
   const [isOpen, setOpen] = useState(false);
+  const [isScreenWide, setIsScreenWide] = useState(false);
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -23,18 +24,19 @@ const Header = () => {
     setOpen(!isOpen);
   };
 
-  const [isScreenWide, setIsScreenWide] = useState(window.innerWidth > 730);
-
   useEffect(() => {
     const handleResize = () => {
       setIsScreenWide(window.innerWidth > 730);
     };
 
+    // Initial check
+    handleResize();
+
+    // Add event listener
     window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    // Cleanup on component unmount
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
