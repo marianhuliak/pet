@@ -22,11 +22,11 @@ const BurgerMenu = () => {
         className={styles.burgerMenuContainer}
       >
         <div className={styles.sectionContainer}>
-          <div className={styles.burgerButtonContainer}>
+          <div className={styles.burgerButtonContainer} onClick={() => handleToggle("sectionOne")}>
             <p className={styles.title}>Брекети</p>
             <button
               className={styles.burgerMenuButton}
-              onClick={() => handleToggle("sectionOne")}
+              
             >
               <img
                 src={arrowSideBurger.src}
@@ -51,7 +51,7 @@ const BurgerMenu = () => {
         </div>
 
         <div className={styles.sectionContainer}>
-          <div className={styles.burgerButtonContainer}>
+          <div className={styles.burgerButtonContainer} onClick={() => handleToggle("sectionTwo")}>
             <p className={styles.title}>
               Засоби гігієни
               <br /> для брекетів
@@ -59,7 +59,7 @@ const BurgerMenu = () => {
 
             <button
               className={styles.burgerMenuButton}
-              onClick={() => handleToggle("sectionTwo")}
+              
             >
               <img
                 src={arrowSideBurger.src}
@@ -109,7 +109,7 @@ const BurgerMenu = () => {
         </div>
 
         <div className={styles.sectionContainer}>
-          <div className={styles.burgerButtonContainer}>
+          <div className={styles.burgerButtonContainer}  onClick={() => handleToggle("sectionFive")}> 
             <p className={styles.title}>
               Аксесуари для
               <br /> ортодона і <br />
@@ -117,7 +117,7 @@ const BurgerMenu = () => {
             </p>
             <button
               className={styles.burgerMenuButton}
-              onClick={() => handleToggle("sectionFive")}
+             
             >
               <img
                 src={arrowSideBurger.src}
@@ -156,7 +156,7 @@ const BurgerMenu = () => {
         </div>
 
         <div className={styles.sectionContainer}>
-          <div className={styles.burgerButtonContainer}>
+          <div className={styles.burgerButtonContainer} onClick={() => handleToggle("sectionSix")}>
             <p className={styles.title}>
               Ортодонтичні
               <br /> трейнери для <br />
@@ -165,7 +165,7 @@ const BurgerMenu = () => {
 
             <button
               className={styles.burgerMenuButton}
-              onClick={() => handleToggle("sectionSix")}
+              
             >
               <img
                 src={arrowSideBurger.src}
