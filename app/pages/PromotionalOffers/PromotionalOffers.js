@@ -26,28 +26,28 @@ const imagesLarge = [
   {
     src: "https://orthostore.com.ua/image/cache/catalog/id-logical__votermarki_-_yes/duga_ni-ti_kruglaya-205x205.jpg",
     alt: "Large Image 4",
-  }
+  },
 ];
 
 const offersVariants = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 3.5 } },
+  hidden: { opacity: 1, y: -100 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 2 } },
+  exit: { opacity: 0, y: 20, transition: { duration: 2 } },
 };
 
 const PromotionalOffers = () => {
   return (
     <>
-     <motion.section
-            className={styles.promotionalOffers}
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ amount: 0.4 }} 
-            variants={offersVariants}
-          >
-            <hr className={styles.customLinePromotionalOffers} />
-      <div className={styles.promotionalOffersContainer}>
-        <div className={styles.fullScreen}>
-         
+      <motion.section
+        className={styles.promotionalOffers}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.4 }}
+        variants={offersVariants}
+      >
+        <hr className={styles.customLinePromotionalOffers} />
+        <div className={styles.promotionalOffersContainer}>
+          <div className={styles.fullScreen}>
             <div>
               <p className={styles.promotionalOffersText}>Акційні пропозиції</p>
             </div>
@@ -59,10 +59,8 @@ const PromotionalOffers = () => {
                 imageSpacing={30}
               />
             </div>
-          
+          </div>
         </div>
-      </div>
-      
       </motion.section>
     </>
   );
@@ -70,9 +68,8 @@ const PromotionalOffers = () => {
 
 export default PromotionalOffers;
 
-
-
-{/*"use client";
+{
+  /*"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -142,4 +139,5 @@ const PromotionalOffers = () => {
   );
 };
 
-export default PromotionalOffers; */}
+export default PromotionalOffers; */
+}

@@ -6,8 +6,9 @@ import styles from "./AboutUs.module.scss";
 import { motion } from "framer-motion";
 
 const aboutUsVariants = {
-  hidden: { opacity: 0, y: -100 },  
-  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 0.8 } },  
+  hidden: { opacity: 1, y: -100 },  
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 2 } },
+  exit: { opacity: 0, y: 20, transition: { duration: 2 }}  
 };
 
 
@@ -16,10 +17,10 @@ const AboutUs = () => {
     <>
       <motion.section
       className={styles.aboutUs}
-      initial="hidden"  
-      whileInView="visible"  
-      viewport={{ amount: 0.4 }}  
-      variants={aboutUsVariants}
+      initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.4 }}
+        variants={aboutUsVariants}
     >  
       <hr className={styles.customLineAboutUs} />
       <div className={styles.AboutUsContainer}>

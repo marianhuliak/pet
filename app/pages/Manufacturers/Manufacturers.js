@@ -7,6 +7,9 @@ import canvas from "../../images/smallWhiteCanvas.svg";
 import Carrousel from "../../pages/features/Carrousel/Carrousel.js";
 import { motion } from "framer-motion";
 
+
+
+
 const imagesLarge = [
   {
     src: "https://orthostore.com.ua/image/cache/catalog/manufacturer/part4-205x220.jpg",
@@ -32,8 +35,9 @@ const imagesLarge = [
 
 
 const manufacturersVariants = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 3.5 } },
+  hidden: { opacity: 1, y: -100 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 2 } },
+  exit: { opacity: 0, y: 20, transition: { duration: 2 }}
 };
 const Manufacturers = () => {
   return (

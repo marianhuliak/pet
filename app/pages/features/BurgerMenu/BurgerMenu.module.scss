@@ -1,3 +1,4 @@
+
 $title-color: rgba(52, 57, 115, 1);
 $details-color: rgba(53, 53, 53, 1);
 $background-color: white;
@@ -14,7 +15,7 @@ $background-color: white;
 
 .burgerMenuContainer {
     position: absolute;
-    z-index: 5;
+    z-index: 11;
     display: flex;
     max-width: 1103px;
     height: auto;
@@ -48,7 +49,6 @@ $background-color: white;
     font-weight: 300;
     line-height: 19.2px;
     text-align: left;
-    line-height: 19.2px;
     padding-bottom: 10px;
     list-style: none;
 

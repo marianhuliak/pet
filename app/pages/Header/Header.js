@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../images/mainLogo.svg";
 import basket from "../../images/basket.svg";
 import userIcon from "../../images/userIcon.svg";
 import styles from "./Header.module.scss";
 import BurgerMenu from "../features/BurgerMenu/BurgerMenu.js";
+import BurgerMenu2 from "../features/BurgerMenu/BurgerMenu2.js";
 import burgerIcon from "../../images/burgerMenu.svg";
 import { AnimatePresence } from "framer-motion";
 
@@ -21,6 +22,20 @@ const Header = () => {
   const clickHandler = () => {
     setOpen(!isOpen);
   };
+
+  const [isScreenWide, setIsScreenWide] = useState(window.innerWidth > 730);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsScreenWide(window.innerWidth > 730);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <header>
@@ -90,7 +105,9 @@ const Header = () => {
         </div>
       </div>
       <hr className={styles.customLine} />
-      <AnimatePresence>{isOpen && <BurgerMenu />}</AnimatePresence>
+      <AnimatePresence>
+        {isOpen && (isScreenWide ? <BurgerMenu /> : <BurgerMenu2 />)}
+      </AnimatePresence>
     </header>
   );
 };

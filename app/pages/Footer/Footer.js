@@ -9,18 +9,20 @@ import facebookLogo from "../../images/facebookLogo.svg";
 import { motion } from "framer-motion";
 
 const footerVariants = {
-  hidden: { opacity: 0, y: -100 },
+  hidden: { opacity: 1, y: -100 },
   visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 3.5 } },
+  exit: { opacity: 0, y: 20, transition: { duration: 2 }}
 };
 
 const Footer = () => {
+  
   return (
     <footer>
       <motion.footer
         className={styles.footer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: 0.4 }}
+        viewport={{ amount: "auto" }}
         variants={footerVariants}
       >
         <hr className={styles.customLineFooter} />
