@@ -1,6 +1,6 @@
 $background-color: rgba(250, 243, 214, 1);
 $line-color: rgba(252, 168, 52, 1);
-$text-color: rgba(52, 57, 115, 1);
+$text-color: rgb(251, 117, 5);
 
 .fullScreen {
   display: flex;
@@ -93,12 +93,7 @@ $text-color: rgba(52, 57, 115, 1);
   margin-top: 68px;
 }
 
-@media (min-width: 800px) {
 
-  .footerContainer {
-      height: 80vh;
-  }
-}
 
 @media (max-width: 1025px) {
   .footerContainer {
