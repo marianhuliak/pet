@@ -53,6 +53,7 @@ $background-color: white;
     text-align: left;
     padding-bottom: 10px;
     list-style: none;
+    cursor: pointer;
 }
 
 .burgerMenuButton {
@@ -71,4 +72,13 @@ $background-color: white;
 .accessoriesDetails,
 .trainersDetails {
     margin-top: 15px;
+}
+
+
+.details:hover {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
 }
