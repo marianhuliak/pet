@@ -92,7 +92,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
     to bottom,
-    rgb(37, 165, 241),
+    rgb(28, 94, 159),
     rgb(25, 18, 25)
 );
 }
