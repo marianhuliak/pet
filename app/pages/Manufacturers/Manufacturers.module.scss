@@ -12,7 +12,7 @@ $text-color: rgb(251, 117, 5);
 }
 
 .manufacturersContainer {
-    background-color: $background-color;
+   
     padding: 40px 8px 95px 8px;
 
 }
@@ -42,10 +42,13 @@ $text-color: rgb(251, 117, 5);
 }
 
 
-@media (min-width: 800px) {
 
-    .manufacturersContainer {
-        height: 80vh;
+@media (max-width: 566px) {
+ 
+    .customLineContainer {
+        padding-right: 50px;
+        margin-left: 50px;
+       
     
     }
 }

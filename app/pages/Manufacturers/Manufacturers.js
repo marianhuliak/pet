@@ -5,15 +5,12 @@ import Image from "next/image";
 import styles from "./Manufacturers.module.scss";
 import Carrousel from "../../pages/features/Carrousel/Carrousel.js";
 import { motion } from "framer-motion";
-import imagesList from "./images"; 
-
-
-
+import imagesList from "./images";
 
 const manufacturersVariants = {
-  hidden: { opacity: 0,y:0,transition: { type: "spring", duration: 2 } },
-  visible: { opacity: 1,y: 40, transition: {  duration: 1 } },
-  exit: { opacity: 0, y: 40, transition: { duration: 1 }}
+  hidden: { opacity: 0, y: 0, transition: { type: "spring", duration: 2 } },
+  visible: { opacity: 1, y: 40, transition: { duration: 1 } },
+  exit: { opacity: 0, y: 40, transition: { duration: 1 } },
 };
 const Manufacturers = () => {
   return (
@@ -25,7 +22,9 @@ const Manufacturers = () => {
         viewport={{ amount: 0.4 }}
         variants={manufacturersVariants}
       >
-        <hr className={styles.customLineManufacturers} />
+        <div className={styles.customLineContainer}>
+          <hr className={styles.customLineManufacturers} />
+        </div>
         <div className={styles.manufacturersContainer}>
           <div className={styles.fullScreen}>
             <div>

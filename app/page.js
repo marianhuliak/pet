@@ -13,7 +13,6 @@ export default function Home() {
       <div className={styles.scrollPart}>
         <BurgerSlider className={styles.section} />
         <PromotionalOffers className={styles.section} />
-        <Manufacturers className={styles.section} />
         <AboutUs className={styles.section} />
         <Footer className={styles.section} />
       </div>

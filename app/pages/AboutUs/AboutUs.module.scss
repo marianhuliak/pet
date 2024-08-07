@@ -12,7 +12,6 @@ $text-color: rgb(251, 117, 5);
 
 .AboutUsContainer {
     padding: 41px 0 91px 80px;
-    background-color: $background-color;
    
 }
 
@@ -107,7 +106,8 @@ $text-color: rgb(251, 117, 5);
         box-shadow: 0px -6px 8px 0px rgba(252, 168, 52, 1),
                     0px 6px 8px 0px rgba(252, 168, 52, 1);
     }
-}
+
+   
 
 @media (max-width: 795px) {
     .AboutUsContainer {
@@ -159,6 +159,14 @@ $text-color: rgb(251, 117, 5);
         box-shadow: 0px -4px 5px 0px rgba(252, 168, 52, 1),
                     0px 4px 5px 0px rgba(252, 168, 52, 1);
     }
+
+    .customLineContainer {
+        padding-right: 50px;
+        margin-left: 50px;
+       
+    
+    }
+}
 }
 
 @media (max-width: 480px) {

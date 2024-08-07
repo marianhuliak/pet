@@ -90,7 +90,11 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: var(--background-color);
+  background: linear-gradient(
+    to bottom,
+    rgb(37, 165, 241),
+    rgb(25, 18, 25)
+);
 }
 
 

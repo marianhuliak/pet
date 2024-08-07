@@ -6,6 +6,7 @@ import styles from "./PromotionalOffers.module.scss";
 import Carrousel from "../../pages/features/Carrousel/Carrousel.js";
 import { motion } from "framer-motion";
 import imagesList from "./images"; 
+import Manufacturers from "../Manufacturers/Manufacturers";
 
 
 const offersVariants = {
@@ -41,6 +42,7 @@ const PromotionalOffers = () => {
           </div>
         </div>
       </motion.section> 
+      <Manufacturers />
     </>
   );
 };

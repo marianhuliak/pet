@@ -10,18 +10,16 @@ $text-color: rgb(251, 117, 5);
     box-sizing: border-box;
 
 }
+.carrouselContainer {
+    height: 100vh;
 
+}
 
 .promotionalOffersContainer {
     padding: 40px 8px 95px 8px;
-    height: 100vh;
+   
 }
 
-.promotionalOffersContainer {
-    
-    background-color: $background-color;
-
-}
 
 .promotionalOffersText {
     font-family: 'NAMU', sans-serif;
@@ -54,6 +52,6 @@ $text-color: rgb(251, 117, 5);
 @media (min-width: 800px) {
 
     .promotionalOffersContainer {
-        height: 80vh;
+       // height: 80vh;
     }
 }

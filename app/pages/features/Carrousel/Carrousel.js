@@ -20,7 +20,7 @@ const Carrousel = ({ images, imageWidth, imageHeight, imageSpacing }) => {
   const handleNext = () => {
     swiperRef.current.swiper.slideNext();
   };
-  images.map((item)=>{console.log(item.src)});
+  
 
   return (
     <div className={styles.carouselContainer}>
