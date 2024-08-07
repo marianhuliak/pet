@@ -14,35 +14,34 @@ const manufacturersVariants = {
 };
 const Manufacturers = () => {
   return (
-    <>{/*
+    <>
       <motion.section
         className={styles.manufacturers}
-        initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.4 }}
         variants={manufacturersVariants}
-  > */}
-  <div className={styles.manufacturers}>
-        <div className={styles.customLineContainer}>
-          <hr className={styles.customLineManufacturers} />
-        </div>
-        <div className={styles.manufacturersContainer}>
-          <div className={styles.fullScreen}>
-            <div>
-              <p className={styles.manufacturersText}>Виробники</p>
-            </div>
-            <div lassName={styles.galleryCntainer}>
-              <Carrousel
-                images={imagesList}
-                imageWidth="200px"
-                imageHeight="200px"
-                imageSpacing={12}
-              />
+      >
+        <div className={styles.manufacturers}>
+          <div className={styles.customLineContainer}>
+            <hr className={styles.customLineManufacturers} />
+          </div>
+          <div className={styles.manufacturersContainer}>
+            <div className={styles.fullScreen}>
+              <div>
+                <p className={styles.manufacturersText}>Виробники</p>
+              </div>
+              <div lassName={styles.galleryCntainer}>
+                <Carrousel
+                  images={imagesList}
+                  imageWidth="200px"
+                  imageHeight="200px"
+                  imageSpacing={12}
+                />
+              </div>
             </div>
           </div>
         </div>
-        </div>
-      {/* </motion.section> */}
+      </motion.section>
     </>
   );
 };

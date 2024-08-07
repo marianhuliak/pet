@@ -16,7 +16,6 @@ const AboutUs = () => {
     <>
       <motion.section
         className={styles.aboutUs}
-        initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.4 }}
         variants={aboutUsVariants}

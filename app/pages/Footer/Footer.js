@@ -20,7 +20,6 @@ const Footer = () => {
     <footer>
       <motion.footer
         className={styles.footer}
-        initial="hidden"
         whileInView="visible"
         viewport={{ amount: "auto" }}
         variants={footerVariants}

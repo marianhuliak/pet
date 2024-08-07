@@ -26,7 +26,6 @@ const BurgerSlider = () => {
   return (
     <motion.section
       className={styles.BurgerSliderContainer}
-      initial="hidden"
       whileInView="visible"
       viewport={{ amount: 0.4 }}
       variants={burgerVariants}

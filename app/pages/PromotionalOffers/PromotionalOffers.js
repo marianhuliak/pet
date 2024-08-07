@@ -20,7 +20,6 @@ const PromotionalOffers = () => {
     <>
       <motion.section
         className={styles.promotionalOffers}
-        initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.4 }}
         variants={offersVariants}
@@ -41,7 +40,6 @@ const PromotionalOffers = () => {
             </div>
           </div>
         </div>
-        <Manufacturers />
       </motion.section> 
      
     </>
