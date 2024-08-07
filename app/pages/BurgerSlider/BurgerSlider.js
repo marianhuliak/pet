@@ -15,7 +15,6 @@ import photo4 from "../../images/slideshow/banner-1920x755.jpg";
 import photo5 from "../../images/slideshow/banner-nadijnist-sajt-1920x755.jpg";
 import { motion } from "framer-motion";
 
-
 const burgerVariants = {
   hidden: { opacity: 1, y: -100 },
   visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 2 } },
@@ -24,14 +23,14 @@ const burgerVariants = {
 
 const BurgerSlider = () => {
   return (
-    <motion.section
-      className={styles.BurgerSliderContainer}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ amount: 0.4 }}
-      variants={burgerVariants}
-    >
-      <div className={styles.fullScreen}>
+    <div className={styles.fullScreen}>
+      <motion.section
+        className={styles.BurgerSliderContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.4 }}
+        variants={burgerVariants}
+      >
         <Swiper
           className={styles.mySwiper}
           loop={true}
@@ -77,8 +76,8 @@ const BurgerSlider = () => {
             />
           </SwiperSlide>
         </Swiper>
-      </div>
-    </motion.section>
+      </motion.section>
+    </div>
   );
 };
 
