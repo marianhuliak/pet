@@ -6,24 +6,24 @@ import styles from "./PromotionalOffers.module.scss";
 import Carrousel from "../../pages/features/Carrousel/Carrousel.js";
 import { motion } from "framer-motion";
 import imagesList from "./images"; 
+import Manufacturers from "../Manufacturers/Manufacturers";
 
 
 const offersVariants = {
-  hidden: { opacity: 1, y: -100 },
-  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 2 } },
-  exit: { opacity: 0, y: 20, transition: { duration: 2 } },
+  hidden: { opacity: 0,y:0,transition: { type: "spring", duration: 2 } },
+  visible: { opacity: 1,y: 40, transition: {  duration: 1 } },
+  exit: { opacity: 0, y: 40, transition: { duration: 1 }}
 };
 
 const PromotionalOffers = () => {
   return (
     <>
-     {/* <motion.section
+      <motion.section
         className={styles.promotionalOffers}
-        initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.4 }}
         variants={offersVariants}
-      > */}
+      > 
         <hr className={styles.customLinePromotionalOffers} />
         <div className={styles.promotionalOffersContainer}>
           <div className={styles.fullScreen}>
@@ -40,7 +40,8 @@ const PromotionalOffers = () => {
             </div>
           </div>
         </div>
-     {/* </motion.section> */}
+      </motion.section> 
+     
     </>
   );
 };

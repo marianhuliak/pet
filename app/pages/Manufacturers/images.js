@@ -1,5 +1,3 @@
-
-
 const images = require.context('../../images/ManufacturersPhoto', false, /\.(jpg|jpeg|png|gif|svg)$/);
 
 const imagesList = images.keys().map((item) => ({

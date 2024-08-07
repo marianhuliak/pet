@@ -1,6 +1,6 @@
 $background-color: rgba(250, 243, 214, 1);
 $line-color: rgba(252, 168, 52, 1);
-$text-color: rgba(52, 57, 115, 1);
+$text-color: rgb(251, 117, 5);
 
 .fullScreen {
     z-index: 10;
@@ -10,18 +10,16 @@ $text-color: rgba(52, 57, 115, 1);
     box-sizing: border-box;
 
 }
+.carrouselContainer {
+    height: 100vh;
 
+}
 
 .promotionalOffersContainer {
     padding: 40px 8px 95px 8px;
-    height: 100vh;
+   
 }
 
-.promotionalOffersContainer {
-    
-    background-color: $background-color;
-
-}
 
 .promotionalOffersText {
     font-family: 'NAMU', sans-serif;
@@ -51,9 +49,10 @@ $text-color: rgba(52, 57, 115, 1);
 }
 
 
+
 @media (min-width: 800px) {
 
     .promotionalOffersContainer {
-        height: 80vh;
+       // height: 80vh;
     }
 }

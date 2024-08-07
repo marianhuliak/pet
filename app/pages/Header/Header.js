@@ -37,7 +37,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
+    <header className={styles.headerr}>
       <div className={styles.headerContainer}>
         <div className={styles.fullScreen}>
           <div className={styles.headerLogoContainer}>

@@ -1,9 +1,8 @@
 $background-color: rgba(250, 243, 214, 1);
 $line-color: rgba(252, 168, 52, 1);
-$text-color: rgba(52, 57, 115, 1);
+$text-color: rgb(251, 117, 5);
 
 .fullScreen {
-  display: flex;
   z-index: 10;
   max-width: 1280px;
   margin: 0 auto;
@@ -12,14 +11,13 @@ $text-color: rgba(52, 57, 115, 1);
 }
 
 .footerContainer {
-  padding: 40px 0 44px 80px;
-  background-color: $background-color;
+  padding: 40px 80px 44px 80px;
  
 }
 
 .containerData {
   display: flex;
-  gap: 75px;
+  justify-content: space-between;
 }
 
 .heading {
@@ -93,16 +91,11 @@ $text-color: rgba(52, 57, 115, 1);
   margin-top: 68px;
 }
 
-@media (min-width: 800px) {
 
-  .footerContainer {
-      height: 80vh;
-  }
-}
 
 @media (max-width: 1025px) {
   .footerContainer {
-    padding: 30px 0 35px 60px;
+    padding: 30px 60px 35px 60px;
   }
 
   .containerData {
@@ -151,7 +144,7 @@ $text-color: rgba(52, 57, 115, 1);
 
 @media (max-width: 768px) {
   .footerContainer {
-    padding: 20px 0 30px 40px;
+    padding: 20px 40px 30px 40px;
   }
 
   .containerData {
@@ -266,7 +259,7 @@ $text-color: rgba(52, 57, 115, 1);
  
     
     .footerContainer {
-        padding: 30px 0 11px 20px;
+        padding: 30px 20px 11px 20px;
     }
     
     .containerData {
