@@ -14,14 +14,15 @@ const manufacturersVariants = {
 };
 const Manufacturers = () => {
   return (
-    <>
+    <>{/*
       <motion.section
         className={styles.manufacturers}
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.4 }}
         variants={manufacturersVariants}
-      >
+  > */}
+  <div className={styles.manufacturers}>
         <div className={styles.customLineContainer}>
           <hr className={styles.customLineManufacturers} />
         </div>
@@ -40,7 +41,8 @@ const Manufacturers = () => {
             </div>
           </div>
         </div>
-      </motion.section>
+        </div>
+      {/* </motion.section> */}
     </>
   );
 };

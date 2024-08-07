@@ -41,8 +41,9 @@ const PromotionalOffers = () => {
             </div>
           </div>
         </div>
+        <Manufacturers />
       </motion.section> 
-      <Manufacturers />
+     
     </>
   );
 };
