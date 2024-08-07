@@ -17,13 +17,13 @@ const offersVariants = {
 const PromotionalOffers = () => {
   return (
     <>
-     {/* <motion.section
+      <motion.section
         className={styles.promotionalOffers}
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.4 }}
         variants={offersVariants}
-      > */}
+      > 
         <hr className={styles.customLinePromotionalOffers} />
         <div className={styles.promotionalOffersContainer}>
           <div className={styles.fullScreen}>
@@ -40,7 +40,7 @@ const PromotionalOffers = () => {
             </div>
           </div>
         </div>
-     {/* </motion.section> */}
+      </motion.section> 
     </>
   );
 };

@@ -13,27 +13,36 @@ import photo2 from "../../images/slideshow/04-1920x755.jpg";
 import photo3 from "../../images/slideshow/05-1920x755.jpg";
 import photo4 from "../../images/slideshow/banner-1920x755.jpg";
 import photo5 from "../../images/slideshow/banner-nadijnist-sajt-1920x755.jpg";
+import { motion } from "framer-motion";
 
-import imagesList from "./images";
-
-
+const burgerVariants = {
+  hidden: { opacity: 1, y: -100 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 2 } },
+  exit: { opacity: 0, y: 20, transition: { duration: 2 } },
+};
 
 const BurgerSlider = () => {
   return (
-    <div className={styles.BurgerSliderContainer}>
+    <motion.section
+      className={styles.BurgerSliderContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.4 }}
+      variants={burgerVariants}
+    >
       <div className={styles.fullScreen}>
         <Swiper
           className={styles.mySwiper}
           loop={true}
-          
-        autoplay={{
-          delay: 3000,
-        }}
-        modules={[ Autoplay]}
+          autoplay={{
+            delay: 3000,
+          }}
+          modules={[Autoplay]}
         >
           <SwiperSlide>
             <Image
-              src={photo1}ß
+              src={photo1}
+              ß
               alt="Photo 1"
               style={{ width: "100%", height: "auto" }}
             />
@@ -68,7 +77,7 @@ const BurgerSlider = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </div>
+    </motion.section>
   );
 };
 
