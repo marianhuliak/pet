@@ -15,6 +15,7 @@ import photo4 from "../../images/slideshow/banner-1920x755.jpg";
 import photo5 from "../../images/slideshow/banner-nadijnist-sajt-1920x755.jpg";
 import { motion } from "framer-motion";
 
+
 const burgerVariants = {
   hidden: { opacity: 1, y: -100 },
   visible: { opacity: 1, y: 0, transition: { type: "spring", duration: 2 } },
