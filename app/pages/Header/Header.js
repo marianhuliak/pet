@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../../images/mainLogo.svg";
+import logo from "../../images/mainLogo.png";
 import basket from "../../images/basket.svg";
 import userIcon from "../../images/userIcon.svg";
 import styles from "./Header.module.scss";
@@ -43,7 +43,7 @@ const Header = () => {
           <div className={styles.headerLogoContainer}>
             <div className={styles.logoContainer}>
               <Image src={logo} alt="Main Logo" className={styles.logoImage} />
-              <p className={styles.logoText}>orthostore</p>
+             {/* <p className={styles.logoText}>orthostore</p> */}
             </div>
           </div>
 
