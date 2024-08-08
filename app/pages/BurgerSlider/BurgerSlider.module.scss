@@ -4,14 +4,13 @@ $line-color: rgba(252, 168, 52, 1);
 .fullScreen {
   display: flex;
   z-index: 10;
-  max-width: 1280px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
 
 .BurgerSliderContainer {
-  height: 93vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
