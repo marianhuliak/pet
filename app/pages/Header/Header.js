@@ -50,10 +50,7 @@ const Header = () => {
           <div className={styles.searchAndMenuContainer}>
             <div className={styles.searchAndInfo}>
               <div className={styles.contactInfo}>
-                <a href="tel:+1234567890" className={styles.firstContactInfo}>
-                  +066 210 0095
-                </a>
-                <p className={styles.secondContactInfo}>Пн-Пт: 9:00-18:00</p>
+               
               </div>
               <div>
                 <div className={styles.endOfContainer}>
