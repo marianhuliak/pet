@@ -25,7 +25,9 @@ export default function ToothModel({ id }) {
         <ambientLight intensity={0.5} />
         <directionalLight position={[0, 0, 50]} />
         <Tooth3D /> 
-        <OrbitControls />
+        <OrbitControls 
+        enableZoom={false}  
+        enablePan={true}/>
       </Canvas>
     </div>
     
