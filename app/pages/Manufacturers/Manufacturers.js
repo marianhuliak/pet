@@ -8,9 +8,9 @@ import { motion } from "framer-motion";
 import imagesList from "./images";
 
 const manufacturersVariants = {
-  hidden: { opacity: 0,  transition: { type: "spring", duration: 2 } },
-  visible: { opacity: 1, transition: { duration: 1 } },
-  exit: { opacity: 0,  transition: { duration: 2 } },
+  hidden: { opacity: 0,  transition: { type: "spring", duration: 0.5 } },
+  visible: { opacity: 1, transition: { duration:  0.5  } },
+  exit: { opacity: 0,  transition: { duration:  0.5  } },
 };
 const Manufacturers = () => {
   return (
