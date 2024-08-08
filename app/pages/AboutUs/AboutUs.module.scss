@@ -11,7 +11,7 @@ $text-color: rgb(251, 117, 5);
 }
 
 .AboutUsContainer {
-    padding: 41px 0 91px 80px;
+    padding: 41px 20px 91px 70px;
    
 }
 
@@ -19,8 +19,9 @@ $text-color: rgb(251, 117, 5);
 
 .infoItem {
     display: flex;
+    flex-direction: column;
     padding-top: 48px;
-    gap: 20px;
+    gap: 85px;
 
 }
 
@@ -42,7 +43,7 @@ $text-color: rgb(251, 117, 5);
 
 .infoContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .infoText {
@@ -72,6 +73,13 @@ $text-color: rgb(251, 117, 5);
 
 }
 
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
 
 
 @media (min-width: 800px) {
@@ -84,102 +92,104 @@ $text-color: rgb(251, 117, 5);
 
 @media (max-width: 1025px) {
     .AboutUsContainer {
-        padding: 30px 0 70px 60px;
+        padding: 50px 30px 85px 50px;
     }
 
     .infoItem {
-        padding-top: 30px;
-        gap: 15px;
+        padding-top: 40px;
+        gap: 60px;
     }
 
     .title {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: normal;
+        letter-spacing: 0.1em;
     }
 
     .infoText {
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 24px;
+        line-height: normal;
+        letter-spacing: 0.9px;
     }
 
     .customLineAboutUs {
-        top: 400px;
-        box-shadow: 0px -6px 8px 0px rgba(252, 168, 52, 1),
-                    0px 6px 8px 0px rgba(252, 168, 52, 1);
+        top: 450px;
     }
+}
 
    
 
 @media (max-width: 795px) {
     .AboutUsContainer {
-        padding: 20px 0 50px 40px;
+        padding: 40px 20px 80px 40px;
     }
 
     .infoItem {
-        padding-top: 20px;
-        gap: 10px;
+        padding-top: 35px;
+        gap: 60px;
     }
 
     .title {
-        font-size: 14px;
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 0.05em;
     }
 
     .infoText {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 22px;
+        line-height: normal;
+        letter-spacing: 0.75px;
     }
 
     .customLineAboutUs {
-        top: 350px;
-        box-shadow: 0px -5px 7px 0px rgba(252, 168, 52, 1),
-                    0px 5px 7px 0px rgba(252, 168, 52, 1);
+        top: 430px;
     }
 }
 
 @media (max-width: 566px) {
+    
+
+
     .AboutUsContainer {
-        padding: 15px 0 40px 20px;
+        padding: 35px 15px 70px 25px;
     }
 
     .infoItem {
-        padding-top: 15px;
-        gap: 8px;
+        padding-top: 25px;
+        gap: 30px;
     }
 
     .title {
-        font-size: 12px;
+        font-size: 14px;
+        line-height: normal;
+        letter-spacing: normal;
     }
 
     .infoText {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 0.5px;
     }
 
     .customLineAboutUs {
-        top: 300px;
-        box-shadow: 0px -4px 5px 0px rgba(252, 168, 52, 1),
-                    0px 4px 5px 0px rgba(252, 168, 52, 1);
+        top: 400px;
     }
+}
 
-    .customLineContainer {
-        padding-right: 50px;
-        margin-left: 50px;
-       
-    
-    }
-}
-}
+
+
 
 @media (max-width: 480px) {
 
     .AboutUsContainer {
-        padding: 30px 0 35px 20px;
+        padding: 30px 5px 35px 20px;
     }
     
     
   
     .infoItem {
         padding-top: 19px;
-        gap: 10px;
+        gap: 24px;
     
     }
     
@@ -218,57 +228,3 @@ $text-color: rgb(251, 117, 5);
 
 
 
-
-
-////////////
-
-
-.toothModelContainer {
-    width: 88px;
-    height: 84px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .toothCanvas {
-    width: 100%;
-    height: 100%;
-  }
-
-  
- 
-  
-
-  @media (max-width: 1025px) {
-    .toothModelContainer {
-        width: 72px;
-        height: 68px;
-    }
-}
-
-@media (max-width: 795px) {
-    .toothModelContainer {
-        width: 56px;
-        height: 52px;
-    }
-}
-
-@media (max-width: 566px) {
-    .toothModelContainer {
-        width: 40px;
-        height: 36px;
-    }
-}
-
-
-
-  @media (max-width: 480px) {
-
-    .toothModelContainer {
-      width: 24px;
-      height: 23px;
-    }
-  
-
-  }

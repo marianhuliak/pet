@@ -25,6 +25,7 @@ export default function ToothModel({ id }) {
         <ambientLight intensity={0.5} />
         <directionalLight position={[0, 0, 50]} />
         <Tooth3D /> 
+        <OrbitControls />
       </Canvas>
     </div>
     

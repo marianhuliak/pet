@@ -6,9 +6,9 @@ import styles from "./AboutUs.module.scss";
 import { motion } from "framer-motion";
 
 const aboutUsVariants = {
-  hidden: { opacity: 0, transition: { type: "spring", duration:  0.5  } },
-  visible: { opacity: 1, transition: { duration:  0.5  } },
-  exit: { opacity: 0, transition: { duration:  0.5  } },
+  hidden: { opacity: 0, transition: { type: "spring", duration: 0.5 } },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
 };
 
 const AboutUs = () => {
@@ -18,7 +18,7 @@ const AboutUs = () => {
         className={styles.aboutUs}
         initial="hidden"
         whileInView="visible"
-        viewport={{ amount: "auto"}}
+        viewport={{ amount: "auto" }}
         variants={aboutUsVariants}
       >
         <div className={styles.customLineContainer}>
@@ -31,31 +31,23 @@ const AboutUs = () => {
             </div>
 
             <div className={styles.infoContainer}>
-              <div className={styles.infoItem}>
-                <div className={styles.imageContainer}>
-                  <ToothModel id="1" />
-                </div>
-                <p className={styles.infoText}>Засновані у 2015 році</p>
+              <div className={styles.imageContainer}>
+                <ToothModel id="1" />
               </div>
-              <div className={styles.infoItem}>
-                <div className={styles.imageContainer}>
-                  <ToothModel id="2" />
-                </div>
-                <p className={styles.infoText}>
+
+              <ul className={styles.infoItem}>
+                <li className={styles.infoText}>Засновані у 2015 році</li>
+
+                <li className={styles.infoText}>
                   Займаємо лідируючі позиції на вітчизняному ринку ортодонтії
-                </p>
-              </div>
-              <div className={styles.infoItem}>
-                <div className={styles.imageContainer}>
-                  <ToothModel id="3" />
-                </div>
-                <p className={styles.infoText}>
+                </li>
+
+                <li className={styles.infoText}>
                   Постачаємо високоякісну ортодонтичну продукцію відомих <br />{" "}
                   світових брендів для ортодонтів та клінік по всій Україні
-                </p>
-              </div>
+                </li>
+              </ul>
             </div>
-            <div className={styles.fullScreen}></div>
           </div>
         </div>
       </motion.section>
