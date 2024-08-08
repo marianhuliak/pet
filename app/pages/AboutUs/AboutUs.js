@@ -31,14 +31,14 @@ const AboutUs = () => {
 
             <div className={styles.infoContainer}>
               <div className={styles.infoItem}>
-                <div className={styles.imageContainer}>
-                  <ToothModel id="1" />
+                <div >
+                  <ToothModel  />
                 </div>
                 <p className={styles.infoText}>Засновані у 2015 році</p>
               </div>
               <div className={styles.infoItem}>
                 <div className={styles.imageContainer}>
-                  <ToothModel id="2" />
+                  <ToothModel />
                 </div>
                 <p className={styles.infoText}>
                   Займаємо лідируючі позиції на вітчизняному ринку ортодонтії
@@ -46,7 +46,7 @@ const AboutUs = () => {
               </div>
               <div className={styles.infoItem}>
                 <div className={styles.imageContainer}>
-                  <ToothModel id="3" />
+                  <ToothModel />
                 </div>
                 <p className={styles.infoText}>
                   Постачаємо високоякісну ортодонтичну продукцію відомих <br />{" "}
