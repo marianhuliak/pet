@@ -2,24 +2,27 @@
 
 import React from "react";
 import Image from "next/image";
-import ToothModel from "./pages/features/ToothModel/ToothModel";
-import styles from "./about.module.scss";
-import arrow from "./images/arrowAbout.svg";
-import jaw from "./images/jaw.svg";
-import hands from "./images/aboutHands.svg"
-import Footer from "./pages/Footer/Footer";
+import ToothModel from "../pages/features/ToothModel/ToothModel.js";
+import styles from "./page.module.scss";
+import arrow from "../images/arrowAbout.svg";
+import jaw from "../images/jaw.svg";
+import hands from "../images/aboutHands.svg";
+import Footer from "../pages/Footer/Footer.js";
+import Link from "next/link";
 
 const BurgerSlider = () => {
   return (
     <div className={styles.sectionsContainer}>
       <div className={styles.sectionOne}>
-        <Image src={arrow} alt="Arrow" className={styles.arrow} />
+        <Link href="/">
+          <Image src={arrow} alt="Arrow" className={styles.arrow} />
+        </Link>
         <div className={styles.sectionOneContainer}>
           <h1 className={styles.title}>
             Ortho <br /> store
           </h1>
           <div className={styles.toothModel}>
-            <ToothModel />
+            <ToothModel id="2" size="about"/>
           </div>
         </div>
       </div>

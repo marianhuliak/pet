@@ -7,17 +7,12 @@ import AboutUs from "./pages/AboutUs/AboutUs.js";
 import Footer from "./pages/Footer/Footer.js";
 
 
-import About from "./about.js"
-
 export default function Home() {
   return (
     <main className={styles.main}>
 
 
-      <About/>
-
-
-     {/*  <Header className={styles.header} />
+      <Header className={styles.header} />
       <div className={styles.scrollPart}>
         <BurgerSlider className={styles.section} />
         <PromotionalOffers className={styles.section} />
@@ -25,7 +20,7 @@ export default function Home() {
         <AboutUs className={styles.section} />
         <Footer className={styles.section} />
       </div>
-      */}
+    
     </main>
   );
 }
