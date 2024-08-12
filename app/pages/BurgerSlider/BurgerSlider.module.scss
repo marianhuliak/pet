@@ -10,7 +10,7 @@ $line-color: rgba(252, 168, 52, 1);
 }
 
 .BurgerSliderContainer {
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   align-items: center;
@@ -35,11 +35,3 @@ $line-color: rgba(252, 168, 52, 1);
   height: 100%;
 }
 
-
-
-@media (max-width: 768px) {
-  .BurgerSliderContainer {
-    height: auto;
-  }
-
-}
