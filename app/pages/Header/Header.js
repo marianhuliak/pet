@@ -10,6 +10,7 @@ import BurgerMenu from "../features/BurgerMenu/BurgerMenu.js";
 import BurgerMenu2 from "../features/BurgerMenu/BurgerMenu2.js";
 import burgerIcon from "../../images/burgerMenu.svg";
 import { AnimatePresence } from "framer-motion";
+import Link from 'next/link';
 
 const Header = () => {
   const [inputValue, setValue] = useState("");
@@ -94,7 +95,7 @@ const Header = () => {
               </div>
 
               <ul className={styles.menuItems}>
-                <li className={styles.menuItem}>Про нас</li>
+                <li className={styles.menuItem}><Link href="/about">Про нас</Link></li>
                 <li className={styles.menuItem}>Виробник</li>
                 <li className={styles.menuItem}>Відгуки</li>
                 <li className={styles.menuItem}>Доставка і оплата</li>

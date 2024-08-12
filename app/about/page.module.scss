@@ -1,0 +1,443 @@
+$background-color1: rgba(52, 57, 115, 1);
+$background-color2: rgb(214, 218, 203);
+
+.sectionsContainer {
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.sectionOne {
+    background-color: $background-color1;
+    height: 100vh;
+    padding: 36px 77px 0 44px;
+
+
+}
+
+.arrow {
+    width: 133px;
+    height: 44px;
+}
+
+.title {
+    color: $background-color2;
+    font-family: 'NAMU', sans-serif;
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 27px;
+    text-shadow: 0 0 10px #FAF3D6;
+}
+
+.sectionOneContainer {
+    display: flex;
+    gap: 102px;
+    margin-left: 46px;
+
+}
+
+
+.toothModel {
+    margin-top: 51px;
+}
+
+
+
+///////////
+
+
+.mainTextTwo,
+.titleTextTwo {
+    color: #343973;
+    font-family: 'NAMU', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 7.2px;
+}
+
+
+.sectionTwo {
+    background-color: $background-color2;
+    height: 100vh;
+    padding: 136px 127px 0 60px;
+
+}
+
+
+.jaw {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+//////////
+
+.mainTextThree {
+    color: #FAF3D6;
+    font-family: 'NAMU', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 7.2px;
+    list-style-position: inside;
+}
+
+
+
+.sectionThree {
+    background-color: $background-color1;
+    height: 100vh;
+    padding: 93px 127px 0 60px;
+
+}
+
+
+.liThree {
+
+    margin-left: 40px;
+    text-indent: -1.4em;
+    padding-left: 1em;
+
+}
+
+
+//////////////
+
+
+
+
+.sectionFour {
+    background-color: $background-color2;
+    height: 100vh;
+    padding: 90px 127px 0 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+}
+
+.mainTextFour {
+    color: #343973;
+    font-family: 'NAMU', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 7.2px;
+
+}
+
+
+.ulContainer {
+    color: #343973;
+    font-family: 'NAMU', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 7.2px;
+    list-style-position: inside;
+    display: flex;
+    gap: 57px;
+
+
+}
+
+
+
+.fourTextlist {
+    margin-left: 35px;
+
+}
+
+///////////
+
+
+.sectionFive {
+    background-color: $background-color1;
+    height: 100vh;
+    padding: 93px 127px 0 60px;
+}
+
+
+.mainTextFive {
+    color: #FAF3D6;
+    font-family: 'NAMU', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 7.2px;
+    list-style-position: inside;
+
+
+
+
+}
+
+
+
+.liFive {
+    margin-left: 40px;
+    text-indent: -1.4em;
+    padding-left: 1em;
+}
+
+.hands {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+
+}
+
+
+/////
+
+
+.sectionSix {
+    background-color: $background-color2;
+    height: 100vh;
+    padding: 93px 127px 0 60px;
+}
+
+
+.mainTextSix {
+    color: #343973;
+    font-family: 'NAMU', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 7.2px;
+    list-style-position: inside;
+
+
+
+
+}
+
+
+
+.liSix {
+    margin-left: 40px;
+    text-indent: -1.4em;
+    padding-left: 1em;
+}
+
+.tooth {
+    width: 400px !important;
+    height: 400px !important;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+
+
+
+
+    .sectionOne {
+        padding: 25px 10px 0 10px;
+
+
+    }
+
+    .arrow {
+        width: 83px;
+        height: 44px;
+    }
+
+    .title {
+        font-size: 72px;
+        letter-spacing: 10.8px;
+        text-shadow: 0 0 10px #FAF3D6;
+    }
+
+    .sectionOneContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 10px;
+
+    }
+
+
+    .toothModel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    ///////////
+
+    .titleTextTwo {
+        font-size: 20px;
+        letter-spacing: 1px;
+
+    }
+
+    .mainTextTwo {
+        font-size: 14px;
+        letter-spacing: 0.7px;
+    }
+
+
+    .sectionTwo {
+        padding: 20px 22px 0 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden; 
+
+
+    }
+
+    .textTwoContainer {
+
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+    }
+
+
+    .jaw {
+        width: 364px;
+        height: 246px;
+        opacity: 1;
+        margin-left: -110px;
+    }
+
+
+    //////////
+
+    .mainTextThree {
+      font-size: 14px;
+        letter-spacing: 0.7px;
+    }
+
+
+
+    .sectionThree {
+        padding: 20px 27px 0 20px;
+
+    }
+
+
+    .liThree {
+
+        margin-left: 15px;
+        text-indent: -1.4em;
+        padding-left: 1em;
+        padding-bottom: 10px;
+
+    }
+
+
+
+    //////////////
+
+
+
+
+    .sectionFour {
+        padding: 20px 22px 0 20px;
+        gap: 60px;
+
+    }
+
+    .mainTextFour {
+        font-size: 20px; 
+        letter-spacing: 1px;
+
+    }
+
+
+    .ulContainer {
+        font-size: 12px; 
+        letter-spacing: 0.6px;
+        display: flex;
+        gap: 2px;
+        line-height: 2;
+    }
+
+
+
+    .fourTextlist {
+        margin-left: 5px;
+
+    }
+
+    ///////////
+
+
+    .sectionFive {
+        padding: 20px 8px 0 20px;
+    }
+
+
+    .mainTextFive {
+        
+        font-size: 14px; /* Розмір шрифту */
+        letter-spacing: 0.7px;
+
+    }
+
+
+
+    .liFive {
+        margin-left: 10px;
+        text-indent: -1.4em;
+        padding-left: 1em;
+        margin-bottom: 15px;
+    }
+
+    .hands {
+        ///////////////////////////////
+        width: 100%;
+        /////////////////
+        height: auto;
+        opacity: 1;
+        margin-left: -20px;
+        margin-right: -8px;
+    
+    }
+
+
+    /////
+
+
+    .sectionSix {
+        padding: 20px 13px 0 20px;
+    }
+
+
+    .mainTextSix {
+        font-size: 14px; 
+        letter-spacing: 0.7px;
+
+    }
+
+
+
+    .liSix {
+        margin-left: 10px;
+        text-indent: -1.4em;
+        padding-left: 1em;
+        margin-bottom: 15px;
+    }
+
+
+}

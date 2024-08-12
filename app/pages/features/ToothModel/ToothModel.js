@@ -18,9 +18,14 @@ function Tooth3D() {
   return <primitive object={fbx} ref={ref} scale={[0.47, 0.47, 0.47]} />;
 }
 
-export default function ToothModel({ id }) {
+export default function ToothModel({ id, size = 'default' }) {
+
+  const toothModelContainer = size === 'main' ? styles.mainContainer : 
+                         size === 'about' ? styles.aboutContainer : 
+                         styles.toothModelContainer;
+
   return (
-    <div className={styles.toothModelContainer} key={id}>
+    <div className={toothModelContainer} key={id}>
       <Canvas camera={{ position: [0, 0, 100] }} className={styles.toothCanvas}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[0, 0, 50]} />

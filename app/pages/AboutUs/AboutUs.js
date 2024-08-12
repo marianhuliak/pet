@@ -32,7 +32,7 @@ const AboutUs = () => {
 
             <div className={styles.infoContainer}>
               <div className={styles.imageContainer}>
-                <ToothModel id="1" />
+                <ToothModel id="1" size="main"/>
               </div>
 
               <ul className={styles.infoItem}>

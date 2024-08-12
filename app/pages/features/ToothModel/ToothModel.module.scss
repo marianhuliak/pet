@@ -12,34 +12,73 @@
   }
 
   
- 
+  @media (min-width: 1251px) {
+    .mainContainer {
+      width: 400px;
+      height: 400px;
+    }
+
+  }
   
 
   @media (max-width: 1250px) {
-    .toothModelContainer {
+    .mainContainer {
       width: 390px;
       height: 390px;
     }
   }
   
   @media (max-width: 795px) {
-    .toothModelContainer {
+    .mainContainer {
       width: 248px;
       height: 248px;
     }
   }
   
   @media (max-width: 566px) {
-    .toothModelContainer {
+    .mainContainer {
       width: 177px;
       height: 177px;
     }
   }
   
   @media (max-width: 480px) {
-    .toothModelContainer {
+    .mainContainer {
       width: 90px;
       height: 90px;
+    }
+  }
+  
+
+
+  @media (min-width: 1251px) {
+    .aboutContainer {
+      width: 400px;
+      height: 400px;
+    }
+
+  }
+
+
+  @media (max-width: 1250px) {
+    .aboutContainer {
+    }
+  }
+  
+  @media (max-width: 795px) {
+    .aboutContainer {
+    }
+  }
+  
+  @media (max-width: 566px) {
+    .aboutContainer {
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .aboutContainer {
+      width: 300px;
+      height: 300px;
     }
   }
   
