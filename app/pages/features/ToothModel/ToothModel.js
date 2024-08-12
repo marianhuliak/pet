@@ -1,13 +1,32 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import tooth from "../../../images/tooth.FBX";
 import styles from './ToothModel.module.scss';
 
+
+import { MeshStandardMaterial } from 'three';
+
 function Tooth3D() {
   const fbx = useLoader(FBXLoader, tooth);
   const ref = useRef();
+
+  {/*useEffect(() => {
+    // Перевірка та зміна матеріалів моделі після завантаження
+    if (fbx) {
+      fbx.traverse((child) => {
+        if (child.isMesh) {
+          // Створення нового матеріалу з емісією
+          child.material = new MeshStandardMaterial({
+            color: 'white',  // Основний колір
+            emissive: 'white', // Колір світіння
+            emissiveIntensity: 1, // Інтенсивність світіння
+          });
+        }
+      });
+    }
+  }, [fbx]); */}
 
   useFrame(() => {
     if (ref.current) {
