@@ -7,8 +7,6 @@
 
 .mySwiper {
   width: calc(100% - 80px);
-  padding-top: 30px !important;
-  padding-bottom: 11px !important;
   cursor: pointer;
 }
 
@@ -36,7 +34,8 @@
   align-items: center;
   justify-content: center;
   width: auto !important;
-  padding: 0 15px;
+
+  padding: 30px 15px 11px 15px;
 }
 
 .swiperSlide img {
