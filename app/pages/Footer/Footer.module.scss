@@ -52,11 +52,6 @@ $text-color: rgb(251, 117, 5);
   text-decoration: underline;
 }
 
-.phoneNumbers {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
 .hoursContainer {
   display: flex;
@@ -78,6 +73,14 @@ $text-color: rgb(251, 117, 5);
 .icon {
   width: 55px;
   height: 55px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+}
+
+
+.icon:hover {
+  transform: scale(1.1);
 }
 
 .copyright {

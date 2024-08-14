@@ -49,12 +49,17 @@ $background-color: white;
     list-style: none;
     cursor: pointer;
     transition: text-decoration 0.2s ease; // Додаємо перехід для анімації
+    transition: transform 0.3s ease;
 }
 
 .details:focus,
 .details:active {
     text-decoration: underline;
 }
+
+.details:hover {
+    transform: scale(1.1);
+  }
 
 .active {
     text-decoration: underline;
