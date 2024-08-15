@@ -11,6 +11,7 @@ import BurgerMenu2 from "../features/BurgerMenu/BurgerMenu2.js";
 import burgerIcon from "../../images/burgerMenu.svg";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import ScrollArrow from "../features/ScrollArrow/ScrollArrow.js"
 
 const Header = () => {
   const [inputValue, setValue] = useState("");
@@ -115,8 +116,10 @@ const Header = () => {
       <AnimatePresence>
         {isOpen && (isScreenWide ? <BurgerMenu /> : <BurgerMenu2 />)}
       </AnimatePresence>
+      <ScrollArrow />
     </header>
   );
 };
 
 export default Header;
+

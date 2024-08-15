@@ -4,7 +4,6 @@ import { OrbitControls } from '@react-three/drei';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import tooth from "../../../images/tooth.FBX";
 import styles from './ToothModel.module.scss';
-import { MeshStandardMaterial } from 'three';
 
 function Tooth3D() {
   const fbx = useLoader(FBXLoader, tooth);

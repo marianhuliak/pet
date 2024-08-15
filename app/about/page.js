@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import ToothModel from "../pages/features/ToothModel/ToothModel.js";
 import styles from "./page.module.scss";
@@ -11,6 +11,38 @@ import Footer from "../pages/Footer/Footer.js";
 import Link from "next/link";
 
 const BurgerSlider = () => {
+
+    useEffect(() => {
+        const sections = document.querySelectorAll(`.${styles.sections} > div`);
+        let isScrolling = false;
+    
+        const handleScroll = (event) => {
+          if (isScrolling) return;
+          isScrolling = true;
+    
+          const direction = event.deltaY > 0 ? 1 : -1;
+          const currentIndex = Array.from(sections).findIndex((section) =>
+            section.getBoundingClientRect().top === 0
+          );
+    
+          let nextIndex = currentIndex + direction;
+          if (nextIndex >= sections.length) nextIndex = sections.length - 1;
+          if (nextIndex < 0) nextIndex = 0;
+    
+          sections[nextIndex].scrollIntoView({ behavior: "smooth" });
+    
+          setTimeout(() => {
+            isScrolling = false;
+          }, 800);
+        };
+    
+        window.addEventListener("wheel", handleScroll);
+    
+        return () => {
+          window.removeEventListener("wheel", handleScroll);
+        };
+      }, []);
+
   return (
     <div className={styles.sections}>
       <div className={styles.sectionOne}>
@@ -164,8 +196,9 @@ const BurgerSlider = () => {
           </ul>
         </div>
       </div>
-
-      <Footer />
+      <div className={styles.footerContainer} >
+        <Footer />
+      </div>
     </div>
   );
 };
