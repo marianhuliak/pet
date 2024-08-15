@@ -12,12 +12,14 @@ import Link from "next/link";
 
 const BurgerSlider = () => {
   return (
-    <div className={styles.sectionsContainer}>
+    <div className={styles.sections}>
       <div className={styles.sectionOne}>
         <div className={styles.fullScreenOne}>
-          <Link href="/">
-            <Image src={arrow} alt="Arrow" className={styles.arrow} />
-          </Link>
+          <div className={styles.arrowContainer}>
+            <Link href="/">
+              <Image src={arrow} alt="Arrow" className={styles.arrow} />
+            </Link>
+          </div>
           <div className={styles.sectionOneContainer}>
             <div className={styles.titleContainer}>
               <h1 className={styles.title}>
