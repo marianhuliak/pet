@@ -19,9 +19,11 @@ const BurgerSlider = () => {
             <Image src={arrow} alt="Arrow" className={styles.arrow} />
           </Link>
           <div className={styles.sectionOneContainer}>
-            <h1 className={styles.title}>
-              Ortho <br /> store
-            </h1>
+            <div className={styles.titleContainer}>
+              <h1 className={styles.title}>
+                Ortho <br /> store
+              </h1>
+            </div>
             <div className={styles.toothModel}>
               <ToothModel id="2" size="about" />
             </div>
