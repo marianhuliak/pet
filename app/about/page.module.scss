@@ -673,7 +673,7 @@ $background-color2: rgb(214, 218, 203);
     }
 
     .title {
-        font-size: 120px;
+        font-size: 110px;
         letter-spacing: 10.8px;
     }
 
@@ -726,7 +726,7 @@ $background-color2: rgb(214, 218, 203);
 
     .jaw {
         width: 364px;
-        height: 246px;
+        height: 45%;
         opacity: 1;
         margin-left: -110px;
     }
@@ -739,11 +739,7 @@ $background-color2: rgb(214, 218, 203);
         letter-spacing: 0.7px;
     }
 
-    .sectionThree {
-       
-        display: block;
-
-    }
+  
 
     .liThree {
 
@@ -836,7 +832,6 @@ $background-color2: rgb(214, 218, 203);
 
     .sectionSix {
         padding: 40px 13px 0 20px;
-        display: block;
     }
 
 
@@ -904,7 +899,6 @@ $background-color2: rgb(214, 218, 203);
     .fullScreenTwo {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         overflow: hidden;
         height: 100%;
         padding: 20px 22px 0 21px;
@@ -914,6 +908,7 @@ $background-color2: rgb(214, 218, 203);
     .textTwoContainer {
         display: flex;
         flex-direction: column;
+
         gap: 18px;
 
     }
@@ -921,7 +916,7 @@ $background-color2: rgb(214, 218, 203);
 
     .jaw {
         width: 364px;
-        height: 246px;
+        height: 60%;
         opacity: 1;
         margin-left: -110px;
     }
@@ -934,11 +929,7 @@ $background-color2: rgb(214, 218, 203);
         letter-spacing: 0.7px;
     }
 
-    .sectionThree {
-       
-        display: block;
-
-    }
+    
 
     .liThree {
 
@@ -1034,7 +1025,6 @@ $background-color2: rgb(214, 218, 203);
 
     .sectionSix {
         padding: 30px 13px 0 20px;
-        display: block;
     }
 
 

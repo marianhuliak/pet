@@ -1,17 +1,17 @@
-import Header from "./pages/Header/Header.js";
+import dynamic from 'next/dynamic';
 import styles from "./page.module.scss";
-import BurgerSlider from "./pages/BurgerSlider/BurgerSlider.js";
-import PromotionalOffers from "./pages/PromotionalOffers/PromotionalOffers.js";
-import Manufacturers from "./pages/Manufacturers/Manufacturers.js";
-import AboutUs from "./pages/AboutUs/AboutUs.js";
-import Footer from "./pages/Footer/Footer.js";
 
+// Ліниве завантаження компонентів
+const Header = dynamic(() => import("./pages/Header/Header.js"));
+const BurgerSlider = dynamic(() => import("./pages/BurgerSlider/BurgerSlider.js"));
+const PromotionalOffers = dynamic(() => import("./pages/PromotionalOffers/PromotionalOffers.js"));
+const Manufacturers = dynamic(() => import("./pages/Manufacturers/Manufacturers.js"));
+const AboutUs = dynamic(() => import("./pages/AboutUs/AboutUs.js"));
+const Footer = dynamic(() => import("./pages/Footer/Footer.js"));
 
 export default function Home() {
   return (
     <main className={styles.main}>
-
-
       <Header className={styles.header} />
       <div className={styles.scrollPart}>
         <BurgerSlider className={styles.section} />
@@ -20,7 +20,6 @@ export default function Home() {
         <AboutUs className={styles.section} />
         <Footer className={styles.section} />
       </div>
-    
     </main>
   );
 }

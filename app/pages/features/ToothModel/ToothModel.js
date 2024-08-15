@@ -1,32 +1,14 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import tooth from "../../../images/tooth.FBX";
 import styles from './ToothModel.module.scss';
-
-
 import { MeshStandardMaterial } from 'three';
 
 function Tooth3D() {
   const fbx = useLoader(FBXLoader, tooth);
   const ref = useRef();
-
-  {/*useEffect(() => {
-    // Перевірка та зміна матеріалів моделі після завантаження
-    if (fbx) {
-      fbx.traverse((child) => {
-        if (child.isMesh) {
-          // Створення нового матеріалу з емісією
-          child.material = new MeshStandardMaterial({
-            color: 'white',  // Основний колір
-            emissive: 'white', // Колір світіння
-            emissiveIntensity: 1, // Інтенсивність світіння
-          });
-        }
-      });
-    }
-  }, [fbx]); */}
 
   useFrame(() => {
     if (ref.current) {
@@ -37,11 +19,12 @@ function Tooth3D() {
   return <primitive object={fbx} ref={ref} scale={[0.47, 0.47, 0.47]} />;
 }
 
-export default function ToothModel({ id, size = 'default' }) {
-
-  const toothModelContainer = size === 'main' ? styles.mainContainer : 
-                         size === 'about' ? styles.aboutContainer : 
-                         styles.toothModelContainer;
+export default function ToothModelContent({ id, size = 'default' }) {
+  const toothModelContainer = useMemo(() => {
+    return size === 'main' ? styles.mainContainer :
+           size === 'about' ? styles.aboutContainer :
+           styles.toothModelContainer;
+  }, [size]);
 
   return (
     <div className={toothModelContainer} key={id}>
@@ -50,11 +33,10 @@ export default function ToothModel({ id, size = 'default' }) {
         <directionalLight position={[0, 0, 50]} />
         <Tooth3D /> 
         <OrbitControls 
-        enableZoom={false}  
-        enablePan={true}/>
+          enableZoom={false}  
+          enablePan={true}
+        />
       </Canvas>
     </div>
-    
   );
 }
-
