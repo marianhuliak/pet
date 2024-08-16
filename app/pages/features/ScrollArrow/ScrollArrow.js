@@ -30,13 +30,20 @@ const ScrollArrow = () => {
 
   return (
     <div
-      style={{
+    style={{
         position: 'fixed',
         bottom: '20px',
         right: '20px',
         cursor: 'pointer',
         transition: 'transform 0.3s ease',
         transform: `rotate(${isAtBottom ? 180 : 0}deg)`,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '50px',
+        height: '50px',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+        borderRadius: '50%', 
       }}
       onClick={isAtBottom ? scrollToTop : scrollToBottom}
     >

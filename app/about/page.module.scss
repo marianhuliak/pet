@@ -288,7 +288,7 @@ $background-color2: rgb(214, 218, 203);
 
 }
 
-///////////////////////////   
+@media (min-width: 769px) {
 
 .arrowContainer {
     position: relative;
@@ -303,7 +303,7 @@ $background-color2: rgb(214, 218, 203);
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url( "../images/arrowAbout.svg"); // Замініть на шлях до вашого фоновго зображення
+      background-image: url("../images/arrowAbout.svg"); // Замініть на шлях до вашого фоновго зображення
       background-size: cover;
       background-position: center;
       transition: opacity 0.5s ease;
@@ -318,6 +318,7 @@ $background-color2: rgb(214, 218, 203);
   .arrow {
     position: absolute;
     right: -105%;
+    top: 4px; // Додайте цей відступ, щоб опустити стрілку нижче
     transition: transform 0.5s ease;
     z-index: 2; // Стрілка над фоном
   }
@@ -327,9 +328,7 @@ $background-color2: rgb(214, 218, 203);
   }
   
 
-
-
-///////////////////////////
+}
 
 
 
@@ -1101,17 +1100,3 @@ $background-color2: rgb(214, 218, 203);
     }
 }
 
-
-.sections {
-    overflow-y: hidden;
-    scroll-snap-type: y mandatory;
-  }
-  
-  .sectionOne,
-  .sectionTwo,
-  .sectionThree,
-  .sectionFour,
-  .sectionFive,
-  .sectionSix {
-    scroll-snap-align: start;
-  }
