@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./PromotionalOffers.module.scss";
-import Carrousel from "../../pages/features/Carrousel/Carrousel.js";
+import Carousel from "../features/Carousel/Carousel.js";
 import { motion } from "framer-motion";
 import imagesList from "./images"; 
 import Manufacturers from "../Manufacturers/Manufacturers";
@@ -32,7 +32,7 @@ const PromotionalOffers = () => {
               <p className={styles.promotionalOffersText}>Акційні пропозиції</p>
             </div>
             <div lassName={styles.galleryCntainer}>
-              <Carrousel
+              <Carousel
                 images={imagesList}
                 imageWidth="244px"
                 imageHeight="321px"

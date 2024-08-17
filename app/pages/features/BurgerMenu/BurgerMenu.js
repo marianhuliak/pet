@@ -82,7 +82,7 @@ const BurgerMenu = () => {
       >
         <div className={styles.sectionOneContainer}>
           <div className={styles.sectionOne}>
-          <Link href="/catalog"><p className={styles.title}>Брекети</p> </Link>
+          <Link href="/"><p className={styles.title}>Брекети</p> </Link>
             <ul className={styles.bracesDetails}>
               {sections.sectionOne.map((detail, index) => (
                 <li

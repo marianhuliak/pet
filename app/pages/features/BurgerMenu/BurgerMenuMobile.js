@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./BurgerMenu2.module.scss";
+import styles from "./BurgerMenuMobile.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import arrowSideBurger from "../../../images/arrow_next.png";
 
-const BurgerMenu = () => {
+const BurgerMenuMobile = () => {
   const [visibleSection, setVisibleSection] = useState(null);
 
   const handleToggle = (section) => {
@@ -227,4 +227,4 @@ const BurgerMenu = () => {
   );
 };
 
-export default BurgerMenu;
+export default BurgerMenuMobile;

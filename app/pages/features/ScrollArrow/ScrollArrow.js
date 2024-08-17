@@ -30,7 +30,7 @@ const ScrollArrow = () => {
 
   return (
     <div
-    style={{
+      style={{
         position: 'fixed',
         bottom: '20px',
         right: '20px',
@@ -47,11 +47,11 @@ const ScrollArrow = () => {
       }}
       onClick={isAtBottom ? scrollToTop : scrollToBottom}
     >
-      <Image
+     <Image
         src={scrollUpArrow}
         alt="Scroll Arrow"
-        width={50}
-        height={50}
+        width={40}
+        height={40}
       />
     </div>
   );

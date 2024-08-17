@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./Manufacturers.module.scss";
-import Carrousel from "../../pages/features/Carrousel/Carrousel.js";
+import Carousel from "../features/Carousel/Carousel.js";
 import { motion } from "framer-motion";
 import imagesList from "./images";
 
@@ -32,7 +32,7 @@ const Manufacturers = () => {
                 <p className={styles.manufacturersText}>Виробники</p>
               </div>
               <div lassName={styles.galleryCntainer}>
-                <Carrousel
+                <Carousel
                   images={imagesList}
                   imageWidth="200px"
                   imageHeight="200px"

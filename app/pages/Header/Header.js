@@ -7,7 +7,7 @@ import basket from "../../images/basket.svg";
 import userIcon from "../../images/userIcon.svg";
 import styles from "./Header.module.scss";
 import BurgerMenu from "../features/BurgerMenu/BurgerMenu.js";
-import BurgerMenu2 from "../features/BurgerMenu/BurgerMenu2.js";
+import BurgerMenuMobile from "../features/BurgerMenu/BurgerMenuMobile.js";
 import burgerIcon from "../../images/burgerMenu.svg";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import ToothModel from "../pages/features/ToothModel/ToothModel.js";
 import styles from "./page.module.scss";
@@ -12,7 +12,16 @@ import Link from "next/link";
 
 const About = () => {
 
- 
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsAnimating(true);
+  };
+
+  const handleAnimationEnd = () => {
+    setIsAnimating(false);
+  };
+
 
   return (
     <div className={styles.sections}>
@@ -20,7 +29,13 @@ const About = () => {
         <div className={styles.fullScreenOne}>
           <div className={styles.arrowContainer}>
             <Link href="/">
-              <Image src={arrow} alt="Arrow" className={styles.arrow} />
+            <Image
+          src={arrow}
+          alt="Arrow"
+          className={`${styles.arrow} ${isAnimating ? styles.animate : ''}`}
+          onMouseEnter={handleMouseEnter}
+          onAnimationEnd={handleAnimationEnd}
+        />
             </Link>
           </div>
           <div className={styles.sectionOneContainer}>
