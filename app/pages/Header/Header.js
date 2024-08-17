@@ -114,7 +114,7 @@ const Header = () => {
       </div>
       <hr className={styles.customLine} />
       <AnimatePresence>
-        {isOpen && (isScreenWide ? <BurgerMenu /> : <BurgerMenu2 />)}
+        {isOpen && (isScreenWide ? <BurgerMenu /> : <BurgerMenuMobile />)}
       </AnimatePresence>
       <ScrollArrow />
     </header>
