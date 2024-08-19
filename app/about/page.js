@@ -66,26 +66,31 @@ const About = () => {
 
 
   useEffect(() => {
-    const container = containerrRef.current;
-
-    const handleScroll = (e) => {
+    const container = containerRef.current;
+  
+    if (!container) return;
+  
+    const handleScroll = () => {
       const scrollLeft = container.scrollLeft;
-
+  
       // Запобігає прокручуванню вліво за межі першого блоку
       if (scrollLeft < 0) {
         container.scrollLeft = 0;
       }
     };
-
+  
     container.addEventListener("scroll", handleScroll);
-
+  
     return () => {
-      container.removeEventListener("scroll", handleScroll);
+      if (container) {
+        container.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
+  
 
   return (
-    <div className={styles.sections}>
+    <div className={styles.sections } ref={containerRef}>
       <div className={styles.sectionOne}>
         <div className={styles.fullScreenOne}>
           <div className={styles.arrowContainer}>
