@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import ToothModel from "../pages/features/ToothModel/ToothModel.js";
 import styles from "./page.module.scss";
@@ -25,6 +25,42 @@ const About = () => {
     setIsAnimating(false);
   };
 
+  
+  const containerRef = useRef(null);
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const container = containerRef.current;
+    const sections = Array.from(container.children);
+    const currentScroll = container.scrollLeft;
+    const sectionWidth = window.innerWidth;
+
+    const currentIndex = Math.round(currentScroll / sectionWidth);
+
+    if (e.deltaY > 0) {
+      // Scroll right
+      if (currentIndex < sections.length - 1) {
+        container.style.scrollBehavior = "auto"; // Вимкнути автоматичне плавне прокручування
+        container.scrollTo({
+          left: (currentIndex + 1) * sectionWidth,
+        });
+        setTimeout(() => {
+          container.style.scrollBehavior = "smooth"; // Увімкнути плавне прокручування
+        }, 1000); // Затримка для більш плавного переходу
+      }
+    } else {
+      // Scroll left
+      if (currentIndex > 0) {
+        container.style.scrollBehavior = "auto";
+        container.scrollTo({
+          left: (currentIndex - 1) * sectionWidth,
+        });
+        setTimeout(() => {
+          container.style.scrollBehavior = "smooth";
+        }, 1000);
+      }
+    }
+  };
 
   return (
     <div className={styles.sections}>

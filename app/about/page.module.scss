@@ -1131,10 +1131,14 @@ $background-color2: rgb(214, 218, 203);
 
 .sections {
     height: 100vh;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
+    width: 100vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    
+    scroll-snap-stop: always; 
+
+
   }
   
   .sectionOne,
@@ -1144,5 +1148,15 @@ $background-color2: rgb(214, 218, 203);
   .sectionFive,
   .sectionSix,
   .footerContainer {
+    flex: 0 0 100vw;
+    height: 100vh;
     scroll-snap-align: start;
+    transition: transform 1s ease;
   }
+  
+
+   /*
+   .sections::-webkit-scrollbar {
+     display: none; 
+   }
+   */
