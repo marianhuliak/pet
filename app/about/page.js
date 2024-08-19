@@ -7,8 +7,10 @@ import styles from "./page.module.scss";
 import arrow from "../images/arrowAbout.svg";
 import jaw from "../images/jaw.svg";
 import hands from "../images/aboutHands.svg";
+import logo from "../images/white-tiff-without.png"
 import Footer from "../pages/Footer/Footer.js";
 import Link from "next/link";
+
 
 const About = () => {
 
@@ -31,10 +33,15 @@ const About = () => {
             <Link href="/">
             <Image
           src={arrow}
+          className={styles.arrow}
           alt="Arrow"
+
+          /*
+          
           className={`${styles.arrow} ${isAnimating ? styles.animate : ''}`}
           onMouseEnter={handleMouseEnter}
           onAnimationEnd={handleAnimationEnd}
+  */
         />
             </Link>
           </div>
@@ -45,7 +52,8 @@ const About = () => {
               </h1>
             </div>
             <div className={styles.toothModel}>
-              <ToothModel id="2" size="about" />
+          {  /*  <ToothModel id="2" size="about" />*/}
+          <Image src={logo} alt="logo" className={styles.logo} />
             </div>
           </div>
         </div>

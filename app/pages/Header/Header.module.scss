@@ -1,6 +1,6 @@
 $background-color: rgb(37, 151, 231);
 $main-font-color: rgba(217, 217, 217, 1);
-$hover-font-color: rgba(150, 150, 150, 1); 
+$hover-font-color: rgba(150, 150, 150, 1);
 $line-color: rgba(252, 168, 52, 1);
 $input-color: rgba(0, 0, 0, 0.25);
 
@@ -23,7 +23,7 @@ $input-color: rgba(0, 0, 0, 0.25);
     background-color: $background-color;
     display: flex;
     padding: 20px 40px 23px 47px;
-    
+
 }
 
 .logoImage {
@@ -114,7 +114,7 @@ $input-color: rgba(0, 0, 0, 0.25);
 
 .icon:hover {
     transform: scale(1.1);
-  }
+}
 
 .iconsContainer {
     display: flex;
@@ -154,7 +154,7 @@ $input-color: rgba(0, 0, 0, 0.25);
     display: flex;
     gap: 50px;
     align-items: flex-end;
-    
+
 }
 
 .menuItem {
@@ -171,7 +171,7 @@ $input-color: rgba(0, 0, 0, 0.25);
     transition: color 0.3s ease;
 
     &:hover {
-        color: $hover-font-color; 
+        color: $hover-font-color;
     }
 }
 
@@ -186,7 +186,7 @@ $input-color: rgba(0, 0, 0, 0.25);
     transform: rotate(0.04deg);
     box-shadow: 0px 5px 10px 0px $background-color;
     margin-top: -1px;
-    background: transparent; 
+    background: transparent;
 }
 
 
@@ -484,6 +484,7 @@ $input-color: rgba(0, 0, 0, 0.25);
 
 
     }
+
     .menuItem {
         font-size: 7px;
         line-height: 7px;
@@ -508,8 +509,3 @@ $input-color: rgba(0, 0, 0, 0.25);
     }
 
 }
-
-
-
-
-

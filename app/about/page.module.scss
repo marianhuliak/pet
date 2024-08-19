@@ -41,7 +41,12 @@ $background-color2: rgb(214, 218, 203);
 
 
 .toothModel {
-    margin-top: 51px;
+    //margin-top: 51px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
 }
 
 
@@ -289,14 +294,20 @@ $background-color2: rgb(214, 218, 203);
 }
 
 @media (min-width: 769px) {
-    .arrowContainer {
+   /* .arrowContainer {
       overflow: hidden;
       display: inline-block;
     }
-    
+    */
     .arrow {
-      transform: translateX(0%);
-      transition: opacity 0.3s ease;
+   /*   transform: translateX(0%);
+      transition: opacity 0.3s ease; */
+
+      transition: filter 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
     }
     
     .arrow.animate {
@@ -414,7 +425,7 @@ $background-color2: rgb(214, 218, 203);
     }
 
     .toothModel {
-        margin-top: 38px; 
+       // margin-top: 38px; 
     }
 
     .fullScreenOne {
@@ -562,7 +573,7 @@ $background-color2: rgb(214, 218, 203);
     }
 
     .toothModel {
-        margin-top: 25px; 
+      //  margin-top: 25px; 
     }
 
     .fullScreenOne {
@@ -729,10 +740,10 @@ $background-color2: rgb(214, 218, 203);
 
 
     .toothModel {
-        display: flex;
+      //  display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 0;
+       // margin-top: 0;
     }
 
     ///////////
@@ -1086,3 +1097,28 @@ $background-color2: rgb(214, 218, 203);
     }
 }
 
+
+
+@keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .logo {
+    animation: heartbeat 3.5s infinite;
+    width: 100%;
+    height: auto;
+  }

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../../images/mainLogo.JPG";
+import logo from "../../images/white-tiff.png";
 import basket from "../../images/basket.svg";
 import userIcon from "../../images/userIcon.svg";
 import styles from "./Header.module.scss";
