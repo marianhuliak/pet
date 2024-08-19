@@ -1160,6 +1160,17 @@ $background-color2: rgb(214, 218, 203);
   }
   
 
+  .sections::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+}
+
    /*
    .sections::-webkit-scrollbar {
      display: none; 
