@@ -2,7 +2,7 @@ $background-color1: rgba(72, 77, 135, 1);
 $background-color2: rgb(214, 218, 203);
 
 
-.footerContainer{
+.footerContainer {
     background: $background-color1;
 }
 
@@ -14,7 +14,7 @@ $background-color2: rgb(214, 218, 203);
 .sectionOne {
     background-color: $background-color1;
     height: 100vh;
-    
+
 }
 
 .arrow {
@@ -46,7 +46,7 @@ $background-color2: rgb(214, 218, 203);
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    
+
 }
 
 
@@ -294,37 +294,38 @@ $background-color2: rgb(214, 218, 203);
 }
 
 @media (min-width: 769px) {
-   /* .arrowContainer {
+
+    /* .arrowContainer {
       overflow: hidden;
       display: inline-block;
     }
     */
     .arrow {
-   /*   transform: translateX(0%);
-      transition: opacity 0.3s ease; */
+        /*   transform: translateX(0%);
+        transition: opacity 0.3s ease;  */
 
-      transition: filter 0.3s ease;
-
-  &:hover {
-    opacity: 0.5;
-  }
+        transition: opacity 0.3s ease;
+        &:hover {
+            opacity: 0.5;
+        }
     }
-    
+
     .arrow.animate {
-      animation: slideIn 0.5s forwards;
+        animation: slideIn 0.5s forwards;
     }
-    
+
     @keyframes slideIn {
-      0% {
-        transform: translateX(100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0%);
-        opacity: 1;
-      }
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
     }
-    
+
 }
 
 
@@ -343,18 +344,17 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 1257px) {
 
     .title {
-        font-size: 170px; 
+        font-size: 170px;
     }
 
 
     .sectionOneContainer {
-        gap: 30px; 
+        gap: 30px;
     }
 
     .titleContainer {
         display: flex;
         align-items: center
-
     }
 
 
@@ -364,15 +364,15 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 1165px) {
 
     .title {
-        font-size: 160px; 
+        font-size: 160px;
     }
 
 
     .sectionOneContainer {
-        gap: 30px; 
+        gap: 30px;
     }
 
-  
+
 
 
 }
@@ -381,15 +381,15 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 1112px) {
 
     .title {
-        font-size: 140px; 
+        font-size: 140px;
     }
 
 
     .sectionOneContainer {
-        gap: 25px; 
+        gap: 25px;
     }
 
-  
+
 
 
 }
@@ -403,29 +403,28 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 1140px) {
 
     .arrow {
-        width: 100px; 
-        height: 32px; 
+        width: 100px;
+        height: 32px;
     }
 
     .title {
-        font-size: 130px; 
-        letter-spacing: 19px; 
-        text-shadow: 0 0 7px #FAF3D6; 
+        font-size: 130px;
+        letter-spacing: 19px;
+        text-shadow: 0 0 7px #FAF3D6;
     }
 
     .titleContainer {
         display: flex;
         align-items: center
-
     }
 
     .sectionOneContainer {
-        gap: 76px; 
-        margin-left: 34px; 
+        gap: 76px;
+        margin-left: 34px;
     }
 
     .toothModel {
-       // margin-top: 38px; 
+        // margin-top: 38px; 
     }
 
     .fullScreenOne {
@@ -434,67 +433,67 @@ $background-color2: rgb(214, 218, 203);
 
     .mainTextTwo,
     .titleTextTwo {
-        font-size: 24px; 
-        letter-spacing: 4.8px; 
+        font-size: 24px;
+        letter-spacing: 4.8px;
     }
 
     .fullScreenTwo {
-        padding: 0 85px 0 40px; 
+        padding: 0 85px 0 40px;
     }
 
     .mainTextThree {
-        font-size: 24px; 
-        letter-spacing: 4.8px; 
+        font-size: 24px;
+        letter-spacing: 4.8px;
     }
 
 
     .liThree {
-        margin-left: 30px; 
-        text-indent: -1.2em; 
-        padding-left: 0.75em; 
+        margin-left: 30px;
+        text-indent: -1.2em;
+        padding-left: 0.75em;
     }
 
     .fullScreenThree {
-        padding: 0 85px 0 40px; 
+        padding: 0 85px 0 40px;
     }
 
-  
+
 
     .mainTextFour {
-        font-size: 24px; 
-        letter-spacing: 4.8px; 
+        font-size: 24px;
+        letter-spacing: 4.8px;
     }
 
     .ulContainer {
-        font-size: 24px; 
-        letter-spacing: 4.8px; 
-        gap: 43px; 
+        font-size: 24px;
+        letter-spacing: 4.8px;
+        gap: 43px;
     }
 
     .fourTextlist {
-        margin-left: 27px; 
+        margin-left: 27px;
     }
 
     .fullScreenFour {
-        padding: 0 85px 0 40px; 
+        padding: 0 85px 0 40px;
     }
 
 
     .mainTextFive {
-        font-size: 24px; 
-        letter-spacing: 4.8px; 
+        font-size: 24px;
+        letter-spacing: 4.8px;
     }
 
     .liFive {
-        margin-left: 30px; 
-        text-indent: -1.2em; 
-        padding-left: 0.75em; 
+        margin-left: 30px;
+        text-indent: -1.2em;
+        padding-left: 0.75em;
     }
 
-  
+
 
     .fullScreenFive {
-        padding: 0 85px 0 40px; 
+        padding: 0 85px 0 40px;
     }
 
     .sectionSix {
@@ -502,29 +501,29 @@ $background-color2: rgb(214, 218, 203);
     }
 
     .mainTextSix {
-        font-size: 24px; 
-        letter-spacing: 4.8px; 
+        font-size: 24px;
+        letter-spacing: 4.8px;
     }
 
     .liSix {
-        margin-left: 30px; 
-        text-indent: -1.2em; 
-        padding-left: 0.75em; 
+        margin-left: 30px;
+        text-indent: -1.2em;
+        padding-left: 0.75em;
     }
 
-  
+
 }
 
 
 @media (max-width: 940px) {
 
     .title {
-        font-size: 120px; 
+        font-size: 120px;
     }
 
 
     .sectionOneContainer {
-        gap: 30px; 
+        gap: 30px;
     }
 
 
@@ -535,12 +534,12 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 860px) {
 
     .title {
-        font-size: 100px; 
+        font-size: 100px;
     }
 
 
     .sectionOneContainer {
-        gap: 30px; 
+        gap: 30px;
     }
 
 
@@ -551,29 +550,28 @@ $background-color2: rgb(214, 218, 203);
 
 @media (max-width: 768px) {
     .arrow {
-        width: 67px; 
-        height: 22px; 
+        width: 67px;
+        height: 22px;
     }
 
     .title {
-        font-size: 110px; 
-        letter-spacing: 13px; 
-        text-shadow: 0 0 5px #FAF3D6; 
+        font-size: 110px;
+        letter-spacing: 13px;
+        text-shadow: 0 0 5px #FAF3D6;
     }
 
     .titleContainer {
         display: flex;
         align-items: center
-
     }
 
     .sectionOneContainer {
-        gap: 51px; 
-        margin-left: 23px; 
+        gap: 51px;
+        margin-left: 23px;
     }
 
     .toothModel {
-      //  margin-top: 25px; 
+        //  margin-top: 25px; 
     }
 
     .fullScreenOne {
@@ -582,81 +580,82 @@ $background-color2: rgb(214, 218, 203);
 
     .mainTextTwo,
     .titleTextTwo {
-        font-size: 18px; 
-        letter-spacing: 3.6px; 
+        font-size: 18px;
+        letter-spacing: 3.6px;
     }
 
     .fullScreenTwo {
-        padding: 0 63px 0 30px; 
+        padding: 0 63px 0 30px;
     }
 
     .mainTextThree {
         font-size: 18px;
-        letter-spacing: 3.6px; 
+        letter-spacing: 3.6px;
     }
 
 
     .liThree {
-        margin-left: 20px; 
-        text-indent: -1em; 
-        padding-left: 0.5em; 
+        margin-left: 20px;
+        text-indent: -1em;
+        padding-left: 0.5em;
     }
 
     .fullScreenThree {
-        padding: 0 63px 0 30px; 
+        padding: 0 63px 0 30px;
     }
 
-//////
+    //////
     .mainTextFour {
-        font-size: 18px; 
-        letter-spacing: 3.6px; 
+        font-size: 18px;
+        letter-spacing: 3.6px;
     }
 
     .ulContainer {
-        font-size: 18px; 
-        letter-spacing: 3.6px; 
+        font-size: 18px;
+        letter-spacing: 3.6px;
         display: flex;
         justify-content: space-between;
     }
 
     .fourTextlist {
-        margin-left: 18px; 
+        margin-left: 18px;
     }
 
     .fullScreenFour {
-        padding: 0 63px 0 30px; 
+        padding: 0 63px 0 30px;
     }
+
     /////
 
-   
+
 
     .mainTextFive {
-        font-size: 18px; 
-        letter-spacing: 3.6px; 
+        font-size: 18px;
+        letter-spacing: 3.6px;
     }
 
     .liFive {
         margin-left: 20px;
-        text-indent: -1em; 
+        text-indent: -1em;
         padding-left: 0.5em;
     }
 
-   
+
 
 
     .sectionSix {
-        padding: 0 63px 0 30px; 
+        padding: 0 63px 0 30px;
     }
 
     .mainTextSix {
-        font-size: 18px; 
-        letter-spacing: 3.6px; 
+        font-size: 18px;
+        letter-spacing: 3.6px;
     }
 
     .liSix {
-        margin-left: 20px; 
-        text-indent: -1em; 
-        padding-left: 0.5em; 
+        margin-left: 20px;
+        text-indent: -1em;
+        padding-left: 0.5em;
     }
 
 }
@@ -666,13 +665,13 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 716px) {
 
     .title {
-        font-size: 90px; 
+        font-size: 90px;
     }
 
 
     .sectionOneContainer {
-        gap: 40px; 
-        margin-left: 23px; 
+        gap: 40px;
+        margin-left: 23px;
     }
 
 
@@ -682,8 +681,8 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 640px) {
 
     .title {
-        font-size: 80px; 
-    } 
+        font-size: 80px;
+    }
 
 }
 
@@ -692,14 +691,14 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 563px) {
 
     .title {
-        font-size: 70px; 
+        font-size: 70px;
     }
 
     .sectionOneContainer {
-        gap: 20px; 
-        margin-left: 23px; 
+        gap: 20px;
+        margin-left: 23px;
     }
- 
+
 
 }
 
@@ -708,11 +707,11 @@ $background-color2: rgb(214, 218, 203);
 @media (max-width: 520px) {
 
     .title {
-        font-size: 60px; 
+        font-size: 60px;
     }
 
-  
- 
+
+
 
 }
 
@@ -740,14 +739,14 @@ $background-color2: rgb(214, 218, 203);
 
 
     .toothModel {
-      //  display: flex;
+        //  display: flex;
         justify-content: center;
         align-items: center;
-       // margin-top: 0;
+        // margin-top: 0;
     }
 
     ///////////
- 
+
 
     .titleTextTwo {
         font-size: 30px;
@@ -793,7 +792,7 @@ $background-color2: rgb(214, 218, 203);
         letter-spacing: 0.7px;
     }
 
-  
+
 
     .liThree {
 
@@ -803,24 +802,25 @@ $background-color2: rgb(214, 218, 203);
         padding-bottom: 18px;
 
     }
+
     .fullScreenThree {
 
-    padding: 20px 27px 0 20px;
+        padding: 20px 27px 0 20px;
     }
 
     ////////////////
 
     .sectionFour {
         display: block;
-    
+
     }
-    
+
     .mainTextFour {
         font-size: 30px;
         letter-spacing: 1px;
     }
-    
-    
+
+
     .ulContainer {
         font-size: 18px;
         letter-spacing: 0.6px;
@@ -829,20 +829,20 @@ $background-color2: rgb(214, 218, 203);
         line-height: 1.8;
         gap: 0;
     }
-    
-    
+
+
     .fourTextlist {
         margin-left: 5px;
-    
+
     }
-    
-    
+
+
     .fullScreenFour {
         padding: 20px 22px 0 20px;
         gap: 40px;
     }
 
-   
+
 
 
     ///////////
@@ -877,8 +877,8 @@ $background-color2: rgb(214, 218, 203);
 
     }
 
-   .fullScreenFive {
-    padding: 20px 8px 0 13px;
+    .fullScreenFive {
+        padding: 20px 8px 0 13px;
     }
 
     /////
@@ -937,7 +937,7 @@ $background-color2: rgb(214, 218, 203);
     }
 
     ///////////
- 
+
 
     .titleTextTwo {
         font-size: 20px;
@@ -983,7 +983,7 @@ $background-color2: rgb(214, 218, 203);
         letter-spacing: 0.7px;
     }
 
-    
+
 
     .liThree {
 
@@ -1004,15 +1004,15 @@ $background-color2: rgb(214, 218, 203);
 
     .sectionFour {
         display: block;
-    
+
     }
-    
+
     .mainTextFour {
         font-size: 20px;
         letter-spacing: 1px;
     }
-    
-    
+
+
     .ulContainer {
         font-size: 12px;
         letter-spacing: 0.6px;
@@ -1021,14 +1021,14 @@ $background-color2: rgb(214, 218, 203);
         line-height: 2;
         gap: 0;
     }
-    
-    
+
+
     .fourTextlist {
         margin-left: 5px;
-    
+
     }
-    
-    
+
+
     .fullScreenFour {
         padding: 20px 22px 0 20px;
     }
@@ -1070,8 +1070,8 @@ $background-color2: rgb(214, 218, 203);
 
     }
 
-   .fullScreenFive {
-    padding: 20px 8px 0 13px;
+    .fullScreenFive {
+        padding: 20px 8px 0 13px;
     }
 
     /////
@@ -1101,24 +1101,48 @@ $background-color2: rgb(214, 218, 203);
 
 @keyframes heartbeat {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
-    25% {
-      transform: scale(1.1);
-    }
-    50% {
-      transform: scale(1);
-    }
-    75% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 
-  .logo {
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo {
     animation: heartbeat 3.5s infinite;
     width: 100%;
     height: auto;
+}
+
+
+
+.sections {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    
+  }
+  
+  .sectionOne,
+  .sectionTwo,
+  .sectionThree,
+  .sectionFour,
+  .sectionFive,
+  .sectionSix,
+  .footerContainer {
+    scroll-snap-align: start;
   }

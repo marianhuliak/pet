@@ -7,12 +7,13 @@ import styles from "./page.module.scss";
 import arrow from "../images/arrowAbout.svg";
 import jaw from "../images/jaw.svg";
 import hands from "../images/aboutHands.svg";
-import logo from "../images/white-tiff-without.png"
+import logo from "../images/white-tiff-without.png";
 import Footer from "../pages/Footer/Footer.js";
 import Link from "next/link";
 
 
 const About = () => {
+ 
 
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -31,18 +32,18 @@ const About = () => {
         <div className={styles.fullScreenOne}>
           <div className={styles.arrowContainer}>
             <Link href="/">
-            <Image
-          src={arrow}
-          className={styles.arrow}
-          alt="Arrow"
+              <Image
+                src={arrow}
+                className={styles.arrow}
+                alt="Arrow"
 
-          /*
+                /*
           
           className={`${styles.arrow} ${isAnimating ? styles.animate : ''}`}
           onMouseEnter={handleMouseEnter}
           onAnimationEnd={handleAnimationEnd}
   */
-        />
+              />
             </Link>
           </div>
           <div className={styles.sectionOneContainer}>
@@ -52,8 +53,8 @@ const About = () => {
               </h1>
             </div>
             <div className={styles.toothModel}>
-          {  /*  <ToothModel id="2" size="about" />*/}
-          <Image src={logo} alt="logo" className={styles.logo} />
+              {/*  <ToothModel id="2" size="about" />*/}
+              <Image src={logo} alt="logo" className={styles.logo} />
             </div>
           </div>
         </div>
@@ -190,7 +191,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.footerContainer} >
+      <div className={styles.footerContainer}>
         <Footer />
       </div>
     </div>
