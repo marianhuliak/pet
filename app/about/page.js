@@ -202,12 +202,13 @@ const About = () => {
 
       <div className={styles.sectionFive}>
         <motion.section
-          className={styles.fullScreenFive}
+         
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: "auto" }}
           variants={aboutVariants}
         >
+          <div className={styles.fullScreenFive}>
           <ul className={styles.mainTextFive}>
             <li className={styles.liFive}>
               Ми з повагою ставимося як до великих компаній, цінуємо їхній
@@ -224,7 +225,9 @@ const About = () => {
               підхід до кожного клієнта.
             </li>
           </ul>
-          <Image src={hands} alt="Hands" className={styles.hands} />
+          </div>
+        
+        <Image src={hands} alt="Hands" className={styles.hands} />
         </motion.section>
       </div>
 

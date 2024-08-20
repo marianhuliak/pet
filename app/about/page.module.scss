@@ -867,13 +867,13 @@ $background-color2: rgb(214, 218, 203);
 
     .hands {
         ///////////////////////////////
-        width: 110%;
+        width: 100%;
         /////////////////
         height: auto;
         opacity: 1;
-        margin-left: -20px;
-        margin-right: -8px;
-        margin-top: -210px;
+       // margin-left: -20px;
+       // margin-right: -8px;
+       // margin-top: -210px;
 
     }
 
@@ -1059,14 +1059,16 @@ $background-color2: rgb(214, 218, 203);
     }
 
     .hands {
+
+
         ///////////////////////////////
-        width: 110%;
+        //width: 110%;
         /////////////////
-        height: auto;
+        //height: auto;
         opacity: 1;
-        margin-left: -20px;
-        margin-right: -8px;
-        margin-top: -150px;
+        //margin-left: -20px;
+        //margin-right: -8px;
+       // margin-top: -150px;
 
     }
 
