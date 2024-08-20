@@ -1129,6 +1129,8 @@ $background-color2: rgb(214, 218, 203);
 
 
 
+
+
 .sections {
     height: 100vh;
     width: 100vw;
@@ -1155,8 +1157,8 @@ $background-color2: rgb(214, 218, 203);
   .footerContainer {
     flex: 0 0 100vw;
     height: 100vh;
-    scroll-snap-align: start;
-    transition: transform 1s ease;
+   // scroll-snap-align: start;
+  //  transition: transform 1s ease;
   }
   
 

@@ -10,11 +10,15 @@ import hands from "../images/aboutHands.svg";
 import logo from "../images/white-tiff-without.png";
 import Footer from "../pages/Footer/Footer.js";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
+const aboutVariants = {
+  hidden: { opacity: 0, transition: { type: "spring", duration: 0.5 } },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
+};
 
 const About = () => {
- 
-
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleMouseEnter = () => {
@@ -25,7 +29,6 @@ const About = () => {
     setIsAnimating(false);
   };
 
-  
   const containerRef = useRef(null);
 
   const handleScroll = (e) => {
@@ -65,21 +68,16 @@ const About = () => {
   return (
     <div className={styles.sections}>
       <div className={styles.sectionOne}>
-        <div className={styles.fullScreenOne}>
+        <motion.section
+          className={styles.fullScreenOne}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
           <div className={styles.arrowContainer}>
             <Link href="/">
-              <Image
-                src={arrow}
-                className={styles.arrow}
-                alt="Arrow"
-
-                /*
-          
-          className={`${styles.arrow} ${isAnimating ? styles.animate : ''}`}
-          onMouseEnter={handleMouseEnter}
-          onAnimationEnd={handleAnimationEnd}
-  */
-              />
+              <Image src={arrow} className={styles.arrow} alt="Arrow" />
             </Link>
           </div>
           <div className={styles.sectionOneContainer}>
@@ -89,16 +87,21 @@ const About = () => {
               </h1>
             </div>
             <div className={styles.toothModel}>
-              {/*  <ToothModel id="2" size="about" />*/}
               <Image src={logo} alt="logo" className={styles.logo} />
             </div>
           </div>
-        </div>
+        </motion.section>
       </div>
 
       <div className={styles.sectionTwo}>
         <div className={styles.fullScreenTwo}>
-          <div className={styles.textTwoContainer}>
+          <motion.section
+            className={styles.textTwoContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: "auto" }}
+            variants={aboutVariants}
+          >
             <p className={styles.titleTextTwo}>
               Інтернет магазин ортодонтичної продукції.{" "}
             </p>
@@ -111,13 +114,19 @@ const About = () => {
               з широкого асортименту ортодонтичних матеріалів та інструментів,
               проконсультуємо по всіх виниклих питань.
             </p>
-          </div>
-          <Image src={jaw} alt="Jaw" className={styles.jaw} />
+            <Image src={jaw} alt="Jaw" className={styles.jaw} />
+          </motion.section>
         </div>
       </div>
 
       <div className={styles.sectionThree}>
-        <div className={styles.fullScreenThree}>
+        <motion.section
+          className={styles.fullScreenThree}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
           <div className={styles.mainTextThree}>
             <ul className={styles.mainTextlist}>
               <li className={styles.liThree}>
@@ -151,11 +160,17 @@ const About = () => {
               дотримуючись всіх вимог і побажань індустрії ортодонтії.
             </p>
           </div>
-        </div>
+        </motion.section>
       </div>
 
       <div className={styles.sectionFour}>
-        <div className={styles.fullScreenFour}>
+        <motion.section
+          className={styles.fullScreenFour}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
           <p className={styles.mainTextFour}>
             Весь асортимент ортодонтичного магазину представлений продукцією
             провідних світових брендів, а саме:
@@ -182,11 +197,17 @@ const About = () => {
               <li> 3B. </li>
             </ul>
           </div>
-        </div>
+        </motion.section>
       </div>
 
       <div className={styles.sectionFive}>
-        <div className={styles.fullScreenFive}>
+        <motion.section
+          className={styles.fullScreenFive}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
           <ul className={styles.mainTextFive}>
             <li className={styles.liFive}>
               Ми з повагою ставимося як до великих компаній, цінуємо їхній
@@ -204,11 +225,17 @@ const About = () => {
             </li>
           </ul>
           <Image src={hands} alt="Hands" className={styles.hands} />
-        </div>
+        </motion.section>
       </div>
 
       <div className={styles.sectionSix}>
-        <div className={styles.fullScreenSix}>
+        <motion.section
+          className={styles.fullScreenSix}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
           <ul className={styles.mainTextSix}>
             <li className={styles.liSix}>
               Для всіх постійних клієнтів передбачені знижки, подарунки та інші
@@ -225,7 +252,7 @@ const About = () => {
               продукцію.
             </li>
           </ul>
-        </div>
+        </motion.section>
       </div>
       <div className={styles.footerContainer}>
         <Footer />
