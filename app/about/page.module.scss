@@ -866,14 +866,9 @@ $background-color2: rgb(214, 218, 203);
     }
 
     .hands {
-        ///////////////////////////////
         width: 100%;
-        /////////////////
         height: auto;
         opacity: 1;
-       // margin-left: -20px;
-       // margin-right: -8px;
-       // margin-top: -210px;
 
     }
 
@@ -1061,14 +1056,7 @@ $background-color2: rgb(214, 218, 203);
     .hands {
 
 
-        ///////////////////////////////
-        //width: 110%;
-        /////////////////
-        //height: auto;
         opacity: 1;
-        //margin-left: -20px;
-        //margin-right: -8px;
-       // margin-top: -150px;
 
     }
 
@@ -1133,6 +1121,8 @@ $background-color2: rgb(214, 218, 203);
 
 
 
+
+
 .sections {
     height: 100vh;
     width: 100vw;
@@ -1141,14 +1131,17 @@ $background-color2: rgb(214, 218, 203);
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scroll-snap-stop: always; 
-
-    
+    scrollbar-width: none; 
     overflow-y: hidden;
-   
-    
     position: relative;
+    cursor: grab;
 
   }
+
+  .sections:active {
+    cursor: grabbing; /* Змінює курсор під час перетягування */
+  }
+  
   
   .sectionOne,
   .sectionTwo,

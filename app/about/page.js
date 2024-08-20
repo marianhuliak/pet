@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
-import ToothModel from "../pages/features/ToothModel/ToothModel.js";
-import styles from "./page.module.scss";
-import arrow from "../images/arrowAbout.svg";
-import jaw from "../images/jaw.svg";
-import hands from "../images/aboutHands.svg";
-import logo from "../images/white-tiff-without.png";
-import Footer from "../pages/Footer/Footer.js";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import arrow from "../images/arrowAbout.svg";
+import logo from "../images/white-tiff-without.png";
+import jaw from "../images/jaw.svg";
+import hands from "../images/aboutHands.svg";
+import Footer from "../pages/Footer/Footer.js";
+import styles from "./page.module.scss";
 
 const aboutVariants = {
   hidden: { opacity: 0, transition: { type: "spring", duration: 0.5 } },
@@ -19,54 +18,49 @@ const aboutVariants = {
 };
 
 const About = () => {
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const sectionsRef = useRef(null);
 
-  const handleMouseEnter = () => {
-    setIsAnimating(true);
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - sectionsRef.current.offsetLeft);
+    setScrollLeft(sectionsRef.current.scrollLeft);
+    document.body.style.cursor = "grabbing"; // Зміна курсору при перетягуванні
+    document.body.style.userSelect = "none"; // Заборона виділення тексту
   };
 
-  const handleAnimationEnd = () => {
-    setIsAnimating(false);
+  const handleMouseLeaveOrUp = () => {
+    setIsDragging(false);
+    document.body.style.cursor = "default"; // Повернення стандартного курсору
+    document.body.style.userSelect = "auto"; // Дозволити виділення тексту після завершення
   };
 
-  const containerRef = useRef(null);
-
-  const handleScroll = (e) => {
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
     e.preventDefault();
-    const container = containerRef.current;
-    const sections = Array.from(container.children);
-    const currentScroll = container.scrollLeft;
-    const sectionWidth = window.innerWidth;
-
-    const currentIndex = Math.round(currentScroll / sectionWidth);
-
-    if (e.deltaY > 0) {
-      // Scroll right
-      if (currentIndex < sections.length - 1) {
-        container.style.scrollBehavior = "auto"; // Вимкнути автоматичне плавне прокручування
-        container.scrollTo({
-          left: (currentIndex + 1) * sectionWidth,
-        });
-        setTimeout(() => {
-          container.style.scrollBehavior = "smooth"; // Увімкнути плавне прокручування
-        }, 1000); // Затримка для більш плавного переходу
-      }
-    } else {
-      // Scroll left
-      if (currentIndex > 0) {
-        container.style.scrollBehavior = "auto";
-        container.scrollTo({
-          left: (currentIndex - 1) * sectionWidth,
-        });
-        setTimeout(() => {
-          container.style.scrollBehavior = "smooth";
-        }, 1000);
-      }
-    }
+    const x = e.pageX - sectionsRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5; // Швидкість прокрутки
+    sectionsRef.current.scrollLeft = scrollLeft - walk;
   };
 
   return (
-    <div className={styles.sections}>
+    <div
+      className={styles.sections}
+      ref={sectionsRef}
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleMouseLeaveOrUp}
+      onMouseUp={handleMouseLeaveOrUp}
+      onMouseMove={handleMouseMove}
+      style={{
+        display: "flex",
+        overflowX: "auto", // Дозволяємо горизонтальне прокручування
+        scrollSnapType: isDragging ? "none" : "x mandatory", // Відключаємо snap під час перетягування
+        scrollBehavior: "smooth",
+        width: "100vw",
+      }}
+    >
       <div className={styles.sectionOne}>
         <motion.section
           className={styles.fullScreenOne}
@@ -202,32 +196,31 @@ const About = () => {
 
       <div className={styles.sectionFive}>
         <motion.section
-         
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: "auto" }}
           variants={aboutVariants}
         >
           <div className={styles.fullScreenFive}>
-          <ul className={styles.mainTextFive}>
-            <li className={styles.liFive}>
-              Ми з повагою ставимося як до великих компаній, цінуємо їхній
-              досвід і готові поставити будь-яку кількість ортодонтической
-              продукції, так і до кожному бажаючому працювати з нами доктору.
-            </li>
-            <li className={styles.liFive}>
-              Інтернет магазин ортодонтической продукції Orthostore слідуючи
-              інновацій в своїй сфері діяльності і пропонує продукцію високої
-              якості від провідних світових брендів.
-            </li>
-            <li className={styles.liFive}>
-              Надаємо професійні кваліфіковані консультації та індивідуальний
-              підхід до кожного клієнта.
-            </li>
-          </ul>
+            <ul className={styles.mainTextFive}>
+              <li className={styles.liFive}>
+                Ми з повагою ставимося як до великих компаній, цінуємо їхній
+                досвід і готові поставити будь-яку кількість ортодонтической
+                продукції, так і до кожному бажаючому працювати з нами доктору.
+              </li>
+              <li className={styles.liFive}>
+                Інтернет магазин ортодонтической продукції Orthostore слідуючи
+                інновацій в своїй сфері діяльності і пропонує продукцію високої
+                якості від провідних світових брендів.
+              </li>
+              <li className={styles.liFive}>
+                Надаємо професійні кваліфіковані консультації та індивідуальний
+                підхід до кожного клієнта.
+              </li>
+            </ul>
           </div>
-        
-        <Image src={hands} alt="Hands" className={styles.hands} />
+
+          <Image src={hands} alt="Hands" className={styles.hands} />
         </motion.section>
       </div>
 
