@@ -18,48 +18,41 @@ const aboutVariants = {
 };
 
 const About = () => {
+  const scrollRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const sectionsRef = useRef(null);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
-    setStartX(e.pageX - sectionsRef.current.offsetLeft);
-    setScrollLeft(sectionsRef.current.scrollLeft);
-    document.body.style.cursor = "grabbing"; // Зміна курсору при перетягуванні
-    document.body.style.userSelect = "none"; // Заборона виділення тексту
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
   };
 
-  const handleMouseLeaveOrUp = () => {
+  const handleMouseLeave = () => {
     setIsDragging(false);
-    document.body.style.cursor = "default"; // Повернення стандартного курсору
-    document.body.style.userSelect = "auto"; // Дозволити виділення тексту після завершення
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
     e.preventDefault();
-    const x = e.pageX - sectionsRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // Швидкість прокрутки
-    sectionsRef.current.scrollLeft = scrollLeft - walk;
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Швидкість прокручування
+    scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
   return (
     <div
       className={styles.sections}
-      ref={sectionsRef}
+      ref={scrollRef}
       onMouseDown={handleMouseDown}
-      onMouseLeave={handleMouseLeaveOrUp}
-      onMouseUp={handleMouseLeaveOrUp}
+      onMouseLeave={handleMouseLeave}
+      onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
-      style={{
-        display: "flex",
-        overflowX: "auto", // Дозволяємо горизонтальне прокручування
-        scrollSnapType: isDragging ? "none" : "x mandatory", // Відключаємо snap під час перетягування
-        scrollBehavior: "smooth",
-        width: "100vw",
-      }}
     >
       <div className={styles.sectionOne}>
         <motion.section

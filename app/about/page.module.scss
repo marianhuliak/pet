@@ -1122,7 +1122,6 @@ $background-color2: rgb(214, 218, 203);
 
 
 
-
 .sections {
     height: 100vh;
     width: 100vw;
@@ -1135,13 +1134,16 @@ $background-color2: rgb(214, 218, 203);
     overflow-y: hidden;
     position: relative;
     cursor: grab;
-
+    -webkit-overflow-scrolling: touch; /* Для підтримки на мобільних */
   }
-
+  
+  .sections::-webkit-scrollbar {
+    display: none; /* Приховує скролбар */
+  }
+  
   .sections:active {
     cursor: grabbing; /* Змінює курсор під час перетягування */
   }
-  
   
   .sectionOne,
   .sectionTwo,
@@ -1152,11 +1154,10 @@ $background-color2: rgb(214, 218, 203);
   .footerContainer {
     flex: 0 0 100vw;
     height: 100vh;
-   // scroll-snap-align: start;
-  //  transition: transform 1s ease;
+    scroll-snap-align: start;
+    transition: transform 1s ease;
   }
   
-
   .sections::after {
     content: '';
     position: absolute;
@@ -1166,13 +1167,5 @@ $background-color2: rgb(214, 218, 203);
     width: 100%;
     background: none;
     pointer-events: none;
-}
-
-
-
-   /*
-   .sections::-webkit-scrollbar {
-     display: none; 
-   }
-   */
-
+  }
+  
