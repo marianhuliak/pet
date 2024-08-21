@@ -40,6 +40,24 @@ const About = () => {
     scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
+
+  let isTrackpad = false;
+
+  window.addEventListener('wheel', function(event) {
+      // Перевірка, якщо deltaMode дорівнює 0 (вказує на пікселі)
+      if (event.deltaMode === 0) {
+          // Зазвичай трекпади генерують події з невеликими змінами (наприклад, delta < 10)
+          if (Math.abs(event.deltaY) < 10) {
+              isTrackpad = true;
+          }
+      } else {
+          // Якщо deltaMode не піксельний, то це, ймовірно, мишка
+          isTrackpad = false;
+      }
+  
+      console.log(`Користувач використовує трекпад: ${isTrackpad}`);
+  });
+
   useEffect(() => {
     const handleWheel = (e) => {
       if (scrollRef.current) {
