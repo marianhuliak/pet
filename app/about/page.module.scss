@@ -14,8 +14,37 @@ $background-color2: rgb(214, 218, 203);
 .sectionOne {
     background-color: $background-color1;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+  }
+  
+  .fullScreenOne {
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 36px 77px 0 44px;
 
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; 
+  }
+  
+  .arrowContainer {
+    align-self: flex-start; 
+   
+  }
+  
+  .sectionOneContainer {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
 
 .arrow {
     width: 133px;
@@ -49,16 +78,6 @@ $background-color2: rgb(214, 218, 203);
 
 }
 
-
-.fullScreenOne {
-    z-index: 10;
-    max-width: 1280px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 36px 77px 0 44px;
-
-}
 
 
 ///////////
@@ -1127,23 +1146,19 @@ $background-color2: rgb(214, 218, 203);
     width: 100vw;
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scroll-snap-stop: always; 
-    scrollbar-width: none; 
+    scroll-snap-stop: always;
+    scrollbar-width: none;
     overflow-y: hidden;
     position: relative;
     cursor: grab;
-    -webkit-overflow-scrolling: touch; /* Для підтримки на мобільних */
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+    
+
+    
+ 
   }
   
-  .sections::-webkit-scrollbar {
-    display: none; /* Приховує скролбар */
-  }
-  
-  .sections:active {
-    cursor: grabbing; /* Змінює курсор під час перетягування */
-  }
   
   .sectionOne,
   .sectionTwo,

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -29,21 +29,39 @@ const About = () => {
     setScrollLeft(scrollRef.current.scrollLeft);
   };
 
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  const handleMouseLeave = () => setIsDragging(false);
+  const handleMouseUp = () => setIsDragging(false);
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Швидкість прокручування
+    const walk = (x - startX) * 2;
     scrollRef.current.scrollLeft = scrollLeft - walk;
   };
+
+  useEffect(() => {
+    const handleWheel = (e) => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft += e.deltaY;
+        
+        scrollRef.current.scrollLeft += e.deltaX;
+        
+        e.preventDefault();
+      }
+    };
+
+    const currentRef = scrollRef.current;
+    if (currentRef) {
+      currentRef.addEventListener("wheel", handleWheel, { passive: false });
+    }
+
+    return () => {
+      if (currentRef) {
+        currentRef.removeEventListener("wheel", handleWheel);
+      }
+    };
+  }, []);
 
   return (
     <div
