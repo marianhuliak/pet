@@ -43,25 +43,28 @@ const About = () => {
   useEffect(() => {
     const handleWheel = (e) => {
       if (scrollRef.current) {
-        scrollRef.current.scrollLeft += e.deltaY;
+        // Збільшуємо множник для підвищення чутливості
+        const sensitivity = 4; // Можна змінити значення для досягнення бажаного ефекту
         
-        scrollRef.current.scrollLeft += e.deltaX;
+        scrollRef.current.scrollLeft += e.deltaY * sensitivity;
+        scrollRef.current.scrollLeft += e.deltaX * sensitivity;
         
         e.preventDefault();
       }
     };
-
+  
     const currentRef = scrollRef.current;
     if (currentRef) {
       currentRef.addEventListener("wheel", handleWheel, { passive: false });
     }
-
+  
     return () => {
       if (currentRef) {
         currentRef.removeEventListener("wheel", handleWheel);
       }
     };
   }, []);
+  
 
   return (
     <div
