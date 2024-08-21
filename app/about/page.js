@@ -40,34 +40,16 @@ const About = () => {
     scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
-
-  let isTrackpad = false;
-
-  window.addEventListener('wheel', function(event) {
-      // Перевірка, якщо deltaMode дорівнює 0 (вказує на пікселі)
-      if (event.deltaMode === 0) {
-          // Зазвичай трекпади генерують події з невеликими змінами (наприклад, delta < 10)
-          if (Math.abs(event.deltaY) < 10) {
-              isTrackpad = true;
-          }
-      } else {
-          // Якщо deltaMode не піксельний, то це, ймовірно, мишка
-          isTrackpad = false;
-      }
-  
-      console.log(`Користувач використовує трекпад: ${isTrackpad}`);
-  });
-
   useEffect(() => {
     const handleWheel = (e) => {
       if (scrollRef.current) {
-        const sensitivity = 4; // Зменшена чутливість
+        // Збільшуємо множник для підвищення чутливості
+        const sensitivity = 4; // Можна змінити значення для досягнення бажаного ефекту
+        
+        scrollRef.current.scrollLeft += e.deltaY * sensitivity;
+        scrollRef.current.scrollLeft += e.deltaX * sensitivity;
+        
         e.preventDefault();
-  
-        scrollRef.current.scrollBy({
-          left: e.deltaY * sensitivity, // Scroll horizontally
-          behavior: 'smooth', // Smooth animation
-        });
       }
     };
   
@@ -82,55 +64,6 @@ const About = () => {
       }
     };
   }, []);
-  
-
-  useEffect(() => {
-    let isScrolling = false;
-    let scrollVelocity = 0;
-    let rafId;
-
-    const handleWheel = (e) => {
-      e.preventDefault();
-
-      if (scrollRef.current) {
-        const sensitivity = 0.1; // Adjust sensitivity to control speed
-        scrollVelocity += e.deltaY * sensitivity;
-        if (!isScrolling) {
-          isScrolling = true;
-          animateScroll();
-        }
-      }
-    };
-
-    const animateScroll = () => {
-      if (scrollRef.current) {
-        scrollRef.current.scrollLeft += scrollVelocity;
-        scrollVelocity *= 0.95; // Deceleration factor
-
-        if (Math.abs(scrollVelocity) > 0.5) {
-          rafId = requestAnimationFrame(animateScroll);
-        } else {
-          isScrolling = false;
-          scrollVelocity = 0;
-        }
-      }
-    };
-
-    const currentRef = scrollRef.current;
-    if (currentRef) {
-      currentRef.addEventListener('wheel', handleWheel, { passive: false });
-    }
-
-    return () => {
-      if (currentRef) {
-        currentRef.removeEventListener('wheel', handleWheel);
-      }
-      if (rafId) {
-        cancelAnimationFrame(rafId);
-      }
-    };
-  }, [scrollRef]);
-
   
 
   return (
