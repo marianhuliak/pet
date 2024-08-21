@@ -65,6 +65,54 @@ const About = () => {
     };
   }, []);
   
+
+  useEffect(() => {
+    let isScrolling = false;
+    let scrollVelocity = 0;
+    let rafId;
+
+    const handleWheel = (e) => {
+      e.preventDefault();
+
+      if (scrollRef.current) {
+        const sensitivity = 0.1; // Adjust sensitivity to control speed
+        scrollVelocity += e.deltaY * sensitivity;
+        if (!isScrolling) {
+          isScrolling = true;
+          animateScroll();
+        }
+      }
+    };
+
+    const animateScroll = () => {
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft += scrollVelocity;
+        scrollVelocity *= 0.95; // Deceleration factor
+
+        if (Math.abs(scrollVelocity) > 0.5) {
+          rafId = requestAnimationFrame(animateScroll);
+        } else {
+          isScrolling = false;
+          scrollVelocity = 0;
+        }
+      }
+    };
+
+    const currentRef = scrollRef.current;
+    if (currentRef) {
+      currentRef.addEventListener('wheel', handleWheel, { passive: false });
+    }
+
+    return () => {
+      if (currentRef) {
+        currentRef.removeEventListener('wheel', handleWheel);
+      }
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+    };
+  }, [scrollRef]);
+
   
 
   return (
