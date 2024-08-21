@@ -44,7 +44,7 @@ const About = () => {
     const handleWheel = (e) => {
       if (scrollRef.current) {
         // Збільшуємо множник для підвищення чутливості
-        const sensitivity = 4; // Можна змінити значення для досягнення бажаного ефекту
+        const sensitivity = 5; // Можна змінити значення для досягнення бажаного ефекту
         
         scrollRef.current.scrollLeft += e.deltaY * sensitivity;
         scrollRef.current.scrollLeft += e.deltaX * sensitivity;
