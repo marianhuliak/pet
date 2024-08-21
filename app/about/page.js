@@ -41,15 +41,27 @@ const About = () => {
   };
 
   useEffect(() => {
+    let targetScrollLeft = 0;
+    let currentScrollLeft = 0;
+    let animationFrameId;
+  
+    const smoothScroll = () => {
+      currentScrollLeft += (targetScrollLeft - currentScrollLeft) * 0.1;
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft = currentScrollLeft;
+      }
+  
+      if (Math.abs(targetScrollLeft - currentScrollLeft) > 0.5) {
+        animationFrameId = requestAnimationFrame(smoothScroll);
+      }
+    };
+  
     const handleWheel = (e) => {
       if (scrollRef.current) {
-        // Збільшуємо множник для підвищення чутливості
-        const sensitivity = 4; // Можна змінити значення для досягнення бажаного ефекту
-        
-        scrollRef.current.scrollLeft += e.deltaY * sensitivity;
-        scrollRef.current.scrollLeft += e.deltaX * sensitivity;
-        
         e.preventDefault();
+        targetScrollLeft += e.deltaY * 3 + e.deltaX * 3;
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = requestAnimationFrame(smoothScroll);
       }
     };
   
@@ -62,8 +74,10 @@ const About = () => {
       if (currentRef) {
         currentRef.removeEventListener("wheel", handleWheel);
       }
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
+  
   
 
   return (
