@@ -64,6 +64,7 @@ const About = () => {
         animationFrameId = requestAnimationFrame(smoothScroll);
       }
     };
+    
   
     const currentRef = scrollRef.current;
     if (currentRef) {
