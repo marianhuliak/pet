@@ -1,0 +1,181 @@
+$background-color1: rgb(250, 243, 214);
+
+.fullScreen{
+    background-color: $background-color1;
+
+
+}
+
+.sections {
+    background-color: white;
+    padding: 30px 56px 57px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-bottom-right-radius: 19px;
+
+    ///////////
+    width: 313px;
+    margin-bottom: 160px;
+
+    //////////////////
+}
+
+.sectionOne {
+    background-color: $background-color1;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.details {
+    color: #353535;
+    font-family: 'NAMU', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2;
+    list-style-type: none;
+
+
+}
+
+
+.title {
+    color: #343973;
+    font-family: "NAMU";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.catalogContainer {
+    display: flex;
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    
+
+}
+
+
+
+//////////////////////////////
+
+
+
+.sectionTwo {
+    width: 100%;
+    background-color: $background-color1;
+    padding: 20px 39px 0 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.categoryTitle {
+    color: #343973;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "NAMU", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.28px;
+    margin-left: 20px;
+}
+
+.productList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 39px;
+    row-gap: 60px;
+    margin-top: 30px;
+}
+
+.productItem {
+    width: 270px;
+    height: 380px;
+    background-color: white;
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    padding-bottom: 30px;
+    justify-content: flex-end
+}
+
+.productName {
+    color: #353535;
+    font-family: "NAMU";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.productPrice {
+    color: #343973;
+    font-family: "NAMU";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.addToCartButton {
+    display: flex;
+    width: 113px;
+    height: 37px;
+    padding: 8px 19px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #343973;
+    background-color: transparent;
+    cursor: pointer;
+    
+
+    color: #343973;
+    font-family: "NAMU";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.showMore {
+    display: inline-flex;
+    padding: 13px 69px 12px 70px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    color: #343973;
+    font-family: "NAMU";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    
+
+}
+
+
+
+
+.footerContainer {
+   // background-color: blue;
+}

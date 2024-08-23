@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./BurgerMenu.module.scss";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const sections = {
   sectionOne: [
@@ -81,7 +82,7 @@ const BurgerMenu = () => {
       >
         <div className={styles.sectionOneContainer}>
           <div className={styles.sectionOne}>
-            <p className={styles.title}>Брекети</p>
+          <Link href="/"><p className={styles.title}>Брекети</p> </Link>
             <ul className={styles.bracesDetails}>
               {sections.sectionOne.map((detail, index) => (
                 <li

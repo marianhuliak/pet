@@ -6,6 +6,7 @@ import styles from "./Footer.module.scss";
 import instagramLogo from "../../images/instagramLogo.svg";
 import youTubeLogo from "../../images/youTubeLogo.svg";
 import facebookLogo from "../../images/facebookLogo.svg";
+import telegramLogo from "../../images/telegramLogo.svg"
 import { motion } from "framer-motion";
 
 const footerVariants = {
@@ -45,13 +46,8 @@ const Footer = () => {
                       href="tel:+380503039494"
                       className={styles.contactDetails}
                     >
-                      +38 050 303 94 94
-                    </a>
-                    <a
-                      href="tel:+380662100095"
-                      className={styles.contactDetails}
-                    >
-                      +38 066 210 00 95
+                      050-303-94-94
+
                     </a>
                   </div>
                 </div>
@@ -73,6 +69,11 @@ const Footer = () => {
                   <Image
                     src={facebookLogo}
                     alt="Facebook Logo"
+                    className={styles.icon}
+                  />
+                   <Image
+                    src={telegramLogo}
+                    alt="Telegram Logo"
                     className={styles.icon}
                   />
                 </div>

@@ -1,37 +1,130 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import ToothModel from "../pages/features/ToothModel/ToothModel.js";
-import styles from "./page.module.scss";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import arrow from "../images/arrowAbout.svg";
+import logo from "../images/white-tiff-without.png";
 import jaw from "../images/jaw.svg";
 import hands from "../images/aboutHands.svg";
 import Footer from "../pages/Footer/Footer.js";
-import Link from "next/link";
+import styles from "./page.module.scss";
 
-const BurgerSlider = () => {
+const aboutVariants = {
+  hidden: { opacity: 0, transition: { type: "spring", duration: 0.5 } },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
+};
+
+const About = () => {
+  const scrollRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => setIsDragging(false);
+  const handleMouseUp = () => setIsDragging(false);
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  useEffect(() => {
+    let targetScrollLeft = 0;
+    let currentScrollLeft = 0;
+    let animationFrameId;
+  
+    const smoothScroll = () => {
+      currentScrollLeft += (targetScrollLeft - currentScrollLeft) * 0.1;
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft = currentScrollLeft;
+      }
+  
+      if (Math.abs(targetScrollLeft - currentScrollLeft) > 0.5) {
+        animationFrameId = requestAnimationFrame(smoothScroll);
+      }
+    };
+  
+    const handleWheel = (e) => {
+      if (scrollRef.current) {
+        e.preventDefault();
+        targetScrollLeft += e.deltaY * 3 + e.deltaX * 3;
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = requestAnimationFrame(smoothScroll);
+      }
+    };
+    
+  
+    const currentRef = scrollRef.current;
+    if (currentRef) {
+      currentRef.addEventListener("wheel", handleWheel, { passive: false });
+    }
+  
+    return () => {
+      if (currentRef) {
+        currentRef.removeEventListener("wheel", handleWheel);
+      }
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+  
+  
+
   return (
-    <div className={styles.sectionsContainer}>
+    <div
+      className={styles.sections}
+      ref={scrollRef}
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleMouseLeave}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
+    >
       <div className={styles.sectionOne}>
-        <div className={styles.fullScreenOne}>
-          <Link href="/">
-            <Image src={arrow} alt="Arrow" className={styles.arrow} />
-          </Link>
+        <motion.section
+          className={styles.fullScreenOne}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
+          <div className={styles.arrowContainer}>
+            <Link href="/">
+              <Image src={arrow} className={styles.arrow} alt="Arrow" />
+            </Link>
+          </div>
           <div className={styles.sectionOneContainer}>
-            <h1 className={styles.title}>
-              Ortho <br /> store
-            </h1>
+            <div className={styles.titleContainer}>
+              <h1 className={styles.title}>
+                Ortho <br /> store
+              </h1>
+            </div>
             <div className={styles.toothModel}>
-              <ToothModel id="2" size="about" />
+              <Image src={logo} alt="logo" className={styles.logo} />
             </div>
           </div>
-        </div>
+        </motion.section>
       </div>
 
       <div className={styles.sectionTwo}>
         <div className={styles.fullScreenTwo}>
-          <div className={styles.textTwoContainer}>
+          <motion.section
+            className={styles.textTwoContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: "auto" }}
+            variants={aboutVariants}
+          >
             <p className={styles.titleTextTwo}>
               Інтернет магазин ортодонтичної продукції.{" "}
             </p>
@@ -44,13 +137,19 @@ const BurgerSlider = () => {
               з широкого асортименту ортодонтичних матеріалів та інструментів,
               проконсультуємо по всіх виниклих питань.
             </p>
-          </div>
-          <Image src={jaw} alt="Jaw" className={styles.jaw} />
+            <Image src={jaw} alt="Jaw" className={styles.jaw} />
+          </motion.section>
         </div>
       </div>
 
       <div className={styles.sectionThree}>
-        <div className={styles.fullScreenThree}>
+        <motion.section
+          className={styles.fullScreenThree}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
           <div className={styles.mainTextThree}>
             <ul className={styles.mainTextlist}>
               <li className={styles.liThree}>
@@ -84,11 +183,17 @@ const BurgerSlider = () => {
               дотримуючись всіх вимог і побажань індустрії ортодонтії.
             </p>
           </div>
-        </div>
+        </motion.section>
       </div>
 
       <div className={styles.sectionFour}>
-        <div className={styles.fullScreenFour}>
+        <motion.section
+          className={styles.fullScreenFour}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
           <p className={styles.mainTextFour}>
             Весь асортимент ортодонтичного магазину представлений продукцією
             провідних світових брендів, а саме:
@@ -115,33 +220,47 @@ const BurgerSlider = () => {
               <li> 3B. </li>
             </ul>
           </div>
-        </div>
+        </motion.section>
       </div>
 
       <div className={styles.sectionFive}>
-        <div className={styles.fullScreenFive}>
-          <ul className={styles.mainTextFive}>
-            <li className={styles.liFive}>
-              Ми з повагою ставимося як до великих компаній, цінуємо їхній
-              досвід і готові поставити будь-яку кількість ортодонтической
-              продукції, так і до кожному бажаючому працювати з нами доктору.
-            </li>
-            <li className={styles.liFive}>
-              Інтернет магазин ортодонтической продукції Orthostore слідуючи
-              інновацій в своїй сфері діяльності і пропонує продукцію високої
-              якості від провідних світових брендів.
-            </li>
-            <li className={styles.liFive}>
-              Надаємо професійні кваліфіковані консультації та індивідуальний
-              підхід до кожного клієнта.
-            </li>
-          </ul>
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
+          <div className={styles.fullScreenFive}>
+            <ul className={styles.mainTextFive}>
+              <li className={styles.liFive}>
+                Ми з повагою ставимося як до великих компаній, цінуємо їхній
+                досвід і готові поставити будь-яку кількість ортодонтической
+                продукції, так і до кожному бажаючому працювати з нами доктору.
+              </li>
+              <li className={styles.liFive}>
+                Інтернет магазин ортодонтической продукції Orthostore слідуючи
+                інновацій в своїй сфері діяльності і пропонує продукцію високої
+                якості від провідних світових брендів.
+              </li>
+              <li className={styles.liFive}>
+                Надаємо професійні кваліфіковані консультації та індивідуальний
+                підхід до кожного клієнта.
+              </li>
+            </ul>
+          </div>
+
           <Image src={hands} alt="Hands" className={styles.hands} />
-        </div>
+        </motion.section>
       </div>
 
       <div className={styles.sectionSix}>
-        <div className={styles.fullScreenSix}>
+        <motion.section
+          className={styles.fullScreenSix}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: "auto" }}
+          variants={aboutVariants}
+        >
           <ul className={styles.mainTextSix}>
             <li className={styles.liSix}>
               Для всіх постійних клієнтів передбачені знижки, подарунки та інші
@@ -158,12 +277,13 @@ const BurgerSlider = () => {
               продукцію.
             </li>
           </ul>
-        </div>
+        </motion.section>
       </div>
-
-      <Footer />
+      <div className={styles.footerContainer}>
+        <Footer />
+      </div>
     </div>
   );
 };
 
-export default BurgerSlider;
+export default About;

@@ -54,6 +54,7 @@ $background-color: white;
     padding-bottom: 10px;
     list-style: none;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .burgerMenuButton {
@@ -77,6 +78,7 @@ $background-color: white;
 
 .details:hover {
   text-decoration: underline;
+  transform: scale(1.1);
 }
 
 .active {

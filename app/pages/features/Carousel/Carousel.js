@@ -4,13 +4,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Navigation, Autoplay } from "swiper/modules";
-import styles from "./Carrousel.module.scss";
+import styles from "./Carousel.module.scss";
 import nextSlide from "../../../images/arrow_next.png";
 import prevSlide from "../../../images/arrow_prev.png";
 import Image from "next/image";
 
 
-const Carrousel = ({ images, imageWidth, imageHeight, imageSpacing }) => {
+const Carousel = ({ images, imageWidth, imageHeight, imageSpacing }) => {
   const swiperRef = useRef(null);
 
   const handlePrev = () => {
@@ -56,4 +56,4 @@ const Carrousel = ({ images, imageWidth, imageHeight, imageSpacing }) => {
   );
 };
 
-export default Carrousel;
+export default Carousel;

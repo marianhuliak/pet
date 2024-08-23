@@ -1,20 +1,50 @@
-$background-color1: rgba(52, 57, 115, 1);
+$background-color1: rgba(72, 77, 135, 1);
 $background-color2: rgb(214, 218, 203);
 
-.sectionsContainer {
 
-    background-color: $background-color1;
+.footerContainer {
+    background: $background-color1;
 }
 
+.sectionsContainer {
+    background-color: $background-color1;
+}
 
 
 .sectionOne {
     background-color: $background-color1;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+  }
+  
+  .fullScreenOne {
+    z-index: 10;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
     padding: 36px 77px 0 44px;
 
-
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; 
+  }
+  
+  .arrowContainer {
+    align-self: flex-start; 
+   
+  }
+  
+  .sectionOneContainer {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
 
 .arrow {
     width: 133px;
@@ -36,23 +66,18 @@ $background-color2: rgb(214, 218, 203);
     display: flex;
     gap: 102px;
     margin-left: 46px;
-
 }
 
 
 .toothModel {
-    margin-top: 51px;
-}
-
-
-.fullScreenOne {
-    z-index: 10;
-    max-width: 1280px;
-    margin: 0 auto;
+    //margin-top: 51px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    box-sizing: border-box;
 
 }
+
 
 
 ///////////
@@ -60,7 +85,7 @@ $background-color2: rgb(214, 218, 203);
 
 .mainTextTwo,
 .titleTextTwo {
-    color: #343973;
+    color: $background-color1;
     font-family: 'NAMU', sans-serif;
     font-size: 36px;
     font-style: normal;
@@ -73,11 +98,9 @@ $background-color2: rgb(214, 218, 203);
 .sectionTwo {
     background-color: $background-color2;
     height: 100vh;
-    padding: 0 127px 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 
@@ -93,7 +116,7 @@ $background-color2: rgb(214, 218, 203);
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-
+    padding: 0 127px 0 60px;
 }
 
 //////////
@@ -114,7 +137,6 @@ $background-color2: rgb(214, 218, 203);
 .sectionThree {
     background-color: $background-color1;
     height: 100vh;
-    padding: 0 127px 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +145,6 @@ $background-color2: rgb(214, 218, 203);
 
 
 .liThree {
-
     margin-left: 40px;
     text-indent: -1.4em;
     padding-left: 1em;
@@ -137,6 +158,7 @@ $background-color2: rgb(214, 218, 203);
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
+    padding: 0 127px 0 60px;
 
 }
 
@@ -144,12 +166,9 @@ $background-color2: rgb(214, 218, 203);
 //////////////
 
 
-
-
 .sectionFour {
     background-color: $background-color2;
     height: 100vh;
-    padding: 0 127px 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,19 +176,18 @@ $background-color2: rgb(214, 218, 203);
 }
 
 .mainTextFour {
-    color: #343973;
+    color: $background-color1;
     font-family: 'NAMU', sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
     letter-spacing: 7.2px;
-
 }
 
 
 .ulContainer {
-    color: #343973;
+    color: $background-color1;
     font-family: 'NAMU', sans-serif;
     font-size: 36px;
     font-style: normal;
@@ -179,15 +197,12 @@ $background-color2: rgb(214, 218, 203);
     list-style-position: inside;
     display: flex;
     gap: 57px;
-
-
 }
 
 
 
 .fourTextlist {
     margin-left: 35px;
-
 }
 
 
@@ -201,6 +216,7 @@ $background-color2: rgb(214, 218, 203);
     flex-direction: column;
     justify-content: center;
     gap: 100px;
+    padding: 0 127px 0 60px;
 
 }
 
@@ -210,7 +226,6 @@ $background-color2: rgb(214, 218, 203);
 .sectionFive {
     background-color: $background-color1;
     height: 100vh;
-    padding: 0 127px 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,10 +241,6 @@ $background-color2: rgb(214, 218, 203);
     line-height: normal;
     letter-spacing: 7.2px;
     list-style-position: inside;
-
-
-
-
 }
 
 
@@ -244,7 +255,6 @@ $background-color2: rgb(214, 218, 203);
     width: 0px;
     height: 0px;
     opacity: 0;
-
 }
 
 .fullScreenFive {
@@ -253,7 +263,7 @@ $background-color2: rgb(214, 218, 203);
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-
+    padding: 0 127px 0 60px;
 }
 
 
@@ -271,7 +281,7 @@ $background-color2: rgb(214, 218, 203);
 
 
 .mainTextSix {
-    color: #343973;
+    color: $background-color1;
     font-family: 'NAMU', sans-serif;
     font-size: 36px;
     font-style: normal;
@@ -279,12 +289,7 @@ $background-color2: rgb(214, 218, 203);
     line-height: normal;
     letter-spacing: 7.2px;
     list-style-position: inside;
-
-
-
-
 }
-
 
 
 .liSix {
@@ -307,19 +312,617 @@ $background-color2: rgb(214, 218, 203);
 
 }
 
+@media (min-width: 769px) {
+
+    /* .arrowContainer {
+      overflow: hidden;
+      display: inline-block;
+    }
+    */
+    .arrow {
+        /*   transform: translateX(0%);
+        transition: opacity 0.3s ease;  */
+
+        transition: opacity 0.3s ease;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .arrow.animate {
+        animation: slideIn 0.5s forwards;
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1257px) {
+
+    .title {
+        font-size: 170px;
+    }
+
+
+    .sectionOneContainer {
+        gap: 30px;
+    }
+
+    .titleContainer {
+        display: flex;
+        align-items: center
+    }
+
+
+}
+
+
+@media (max-width: 1165px) {
+
+    .title {
+        font-size: 160px;
+    }
+
+
+    .sectionOneContainer {
+        gap: 30px;
+    }
+
+
+
+
+}
+
+
+@media (max-width: 1112px) {
+
+    .title {
+        font-size: 140px;
+    }
+
+
+    .sectionOneContainer {
+        gap: 25px;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 1140px) {
+
+    .arrow {
+        width: 100px;
+        height: 32px;
+    }
+
+    .title {
+        font-size: 130px;
+        letter-spacing: 19px;
+        text-shadow: 0 0 7px #FAF3D6;
+    }
+
+    .titleContainer {
+        display: flex;
+        align-items: center
+    }
+
+    .sectionOneContainer {
+        gap: 76px;
+        margin-left: 34px;
+    }
+
+    .toothModel {
+        // margin-top: 38px; 
+    }
+
+    .fullScreenOne {
+        padding: 27px 58px 0 35px;
+    }
+
+    .mainTextTwo,
+    .titleTextTwo {
+        font-size: 24px;
+        letter-spacing: 4.8px;
+    }
+
+    .fullScreenTwo {
+        padding: 0 85px 0 40px;
+    }
+
+    .mainTextThree {
+        font-size: 24px;
+        letter-spacing: 4.8px;
+    }
+
+
+    .liThree {
+        margin-left: 30px;
+        text-indent: -1.2em;
+        padding-left: 0.75em;
+    }
+
+    .fullScreenThree {
+        padding: 0 85px 0 40px;
+    }
+
+
+
+    .mainTextFour {
+        font-size: 24px;
+        letter-spacing: 4.8px;
+    }
+
+    .ulContainer {
+        font-size: 24px;
+        letter-spacing: 4.8px;
+        gap: 43px;
+    }
+
+    .fourTextlist {
+        margin-left: 27px;
+    }
+
+    .fullScreenFour {
+        padding: 0 85px 0 40px;
+    }
+
+
+    .mainTextFive {
+        font-size: 24px;
+        letter-spacing: 4.8px;
+    }
+
+    .liFive {
+        margin-left: 30px;
+        text-indent: -1.2em;
+        padding-left: 0.75em;
+    }
+
+
+
+    .fullScreenFive {
+        padding: 0 85px 0 40px;
+    }
+
+    .sectionSix {
+        padding: 0 85px 0 40px;
+    }
+
+    .mainTextSix {
+        font-size: 24px;
+        letter-spacing: 4.8px;
+    }
+
+    .liSix {
+        margin-left: 30px;
+        text-indent: -1.2em;
+        padding-left: 0.75em;
+    }
+
+
+}
+
+
+@media (max-width: 940px) {
+
+    .title {
+        font-size: 120px;
+    }
+
+
+    .sectionOneContainer {
+        gap: 30px;
+    }
+
+
+}
+
+
+
+@media (max-width: 860px) {
+
+    .title {
+        font-size: 100px;
+    }
+
+
+    .sectionOneContainer {
+        gap: 30px;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .arrow {
+        width: 67px;
+        height: 22px;
+    }
+
+    .title {
+        font-size: 110px;
+        letter-spacing: 13px;
+        text-shadow: 0 0 5px #FAF3D6;
+    }
+
+    .titleContainer {
+        display: flex;
+        align-items: center
+    }
+
+    .sectionOneContainer {
+        gap: 51px;
+        margin-left: 23px;
+    }
+
+    .toothModel {
+        //  margin-top: 25px; 
+    }
+
+    .fullScreenOne {
+        padding: 18px 38px 0 22px;
+    }
+
+    .mainTextTwo,
+    .titleTextTwo {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+    }
+
+    .fullScreenTwo {
+        padding: 0 63px 0 30px;
+    }
+
+    .mainTextThree {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+    }
+
+
+    .liThree {
+        margin-left: 20px;
+        text-indent: -1em;
+        padding-left: 0.5em;
+    }
+
+    .fullScreenThree {
+        padding: 0 63px 0 30px;
+    }
+
+    //////
+    .mainTextFour {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+    }
+
+    .ulContainer {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fourTextlist {
+        margin-left: 18px;
+    }
+
+    .fullScreenFour {
+        padding: 0 63px 0 30px;
+    }
+
+    /////
+
+
+
+    .mainTextFive {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+    }
+
+    .liFive {
+        margin-left: 20px;
+        text-indent: -1em;
+        padding-left: 0.5em;
+    }
+
+
+
+
+    .sectionSix {
+        padding: 0 63px 0 30px;
+    }
+
+    .mainTextSix {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+    }
+
+    .liSix {
+        margin-left: 20px;
+        text-indent: -1em;
+        padding-left: 0.5em;
+    }
+
+}
+
+
+
+@media (max-width: 716px) {
+
+    .title {
+        font-size: 90px;
+    }
+
+
+    .sectionOneContainer {
+        gap: 40px;
+        margin-left: 23px;
+    }
+
+
+}
+
+
+@media (max-width: 640px) {
+
+    .title {
+        font-size: 80px;
+    }
+
+}
+
+
+
+@media (max-width: 563px) {
+
+    .title {
+        font-size: 70px;
+    }
+
+    .sectionOneContainer {
+        gap: 20px;
+        margin-left: 23px;
+    }
+
+
+}
+
+
+
+@media (max-width: 520px) {
+
+    .title {
+        font-size: 60px;
+    }
+
+
+
+
+}
 
 @media (max-width: 480px) {
+    .sectionOne {
+        padding: 30px 15px 0 15px;
+    }
+
+    .arrow {
+        width: 100px;
+        height: 35px;
+    }
+
+    .title {
+        font-size: 110px;
+        letter-spacing: 10.8px;
+    }
+
+    .sectionOneContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 10px;
+    }
+
+
+    .toothModel {
+        //  display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-top: 0;
+    }
+
+    ///////////
+
+
+    .titleTextTwo {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    .mainTextTwo {
+        font-size: 20px;
+        letter-spacing: 0.7px;
+    }
+
+
+    .fullScreenTwo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        height: 100%;
+        padding: 20px 25px 0 25px;
+    }
+
+
+    .textTwoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+
+    .jaw {
+        width: 364px;
+        height: 45%;
+        opacity: 1;
+        margin-left: -110px;
+    }
+
+
+    //////////
+
+    .mainTextThree {
+        font-size: 20px;
+        letter-spacing: 0.7px;
+    }
+
+
+
+    .liThree {
+
+        margin-left: 15px;
+        text-indent: -1.4em;
+        padding-left: 1em;
+        padding-bottom: 18px;
+
+    }
+
+    .fullScreenThree {
+
+        padding: 20px 27px 0 20px;
+    }
+
+    ////////////////
+
+    .sectionFour {
+        display: block;
+
+    }
+
+    .mainTextFour {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+
+    .ulContainer {
+        font-size: 18px;
+        letter-spacing: 0.6px;
+        display: flex;
+        justify-content: space-around;
+        line-height: 1.8;
+        gap: 0;
+    }
+
+
+    .fourTextlist {
+        margin-left: 5px;
+
+    }
+
+
+    .fullScreenFour {
+        padding: 20px 22px 0 20px;
+        gap: 40px;
+    }
 
 
 
 
+    ///////////
+
+
+    .sectionFive {
+        display: block;
+    }
+
+
+    .mainTextFive {
+        font-size: 20px;
+        letter-spacing: 0.7px;
+    }
+
+    .liFive {
+        margin-left: 10px;
+        text-indent: -1.4em;
+        padding-left: 1em;
+        margin-bottom: 15px;
+    }
+
+    .hands {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+
+    }
+
+    .fullScreenFive {
+        padding: 20px 8px 0 13px;
+    }
+
+    /////
+
+
+    .sectionSix {
+        padding: 40px 13px 0 20px;
+    }
+
+
+    .mainTextSix {
+        font-size: 20px;
+        letter-spacing: 0.7px;
+
+    }
+
+
+    .liSix {
+        margin-left: 10px;
+        text-indent: -1.4em;
+        padding-left: 1em;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+@media (max-width: 400px) {
     .sectionOne {
         padding: 25px 10px 0 10px;
-
-
     }
 
     .arrow {
@@ -330,7 +933,6 @@ $background-color2: rgb(214, 218, 203);
     .title {
         font-size: 72px;
         letter-spacing: 10.8px;
-        text-shadow: 0 0 10px #FAF3D6;
     }
 
     .sectionOneContainer {
@@ -338,7 +940,6 @@ $background-color2: rgb(214, 218, 203);
         flex-direction: column;
         gap: 20px;
         margin-left: 10px;
-
     }
 
 
@@ -351,10 +952,10 @@ $background-color2: rgb(214, 218, 203);
 
     ///////////
 
+
     .titleTextTwo {
         font-size: 20px;
         letter-spacing: 1px;
-
     }
 
     .mainTextTwo {
@@ -363,20 +964,19 @@ $background-color2: rgb(214, 218, 203);
     }
 
 
-    .sectionTwo {
-        padding: 20px 22px 0 21px;
+    .fullScreenTwo {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         overflow: hidden;
-
-
+        height: 100%;
+        padding: 20px 22px 0 21px;
     }
 
-    .textTwoContainer {
 
+    .textTwoContainer {
         display: flex;
         flex-direction: column;
+
         gap: 18px;
 
     }
@@ -384,7 +984,7 @@ $background-color2: rgb(214, 218, 203);
 
     .jaw {
         width: 364px;
-        height: 246px;
+        height: 60%;
         opacity: 1;
         margin-left: -110px;
     }
@@ -399,38 +999,31 @@ $background-color2: rgb(214, 218, 203);
 
 
 
-    .sectionThree {
-        padding: 20px 27px 0 20px;
-
-    }
-
-
     .liThree {
 
         margin-left: 15px;
         text-indent: -1.4em;
         padding-left: 1em;
-        padding-bottom: 10px;
+        padding-bottom: 18px;
 
+    }
+
+    .fullScreenThree {
+        padding: 20px 27px 0 20px;
     }
 
 
 
-    //////////////
-
-
-
+    ////////////////
 
     .sectionFour {
-        padding: 20px 22px 0 20px;
-        gap: 60px;
+        display: block;
 
     }
 
     .mainTextFour {
         font-size: 20px;
         letter-spacing: 1px;
-
     }
 
 
@@ -438,10 +1031,10 @@ $background-color2: rgb(214, 218, 203);
         font-size: 12px;
         letter-spacing: 0.6px;
         display: flex;
-        gap: 2px;
+        justify-content: space-around;
         line-height: 2;
+        gap: 0;
     }
-
 
 
     .fourTextlist {
@@ -449,23 +1042,28 @@ $background-color2: rgb(214, 218, 203);
 
     }
 
+
+    .fullScreenFour {
+        padding: 20px 22px 0 20px;
+    }
+
+    .fullScreenFour {
+        gap: 60px;
+    }
+
+
     ///////////
 
 
     .sectionFive {
-        padding: 20px 8px 0 20px;
+        display: block;
     }
 
 
     .mainTextFive {
-
         font-size: 14px;
-        /* Розмір шрифту */
         letter-spacing: 0.7px;
-
     }
-
-
 
     .liFive {
         margin-left: 10px;
@@ -475,22 +1073,21 @@ $background-color2: rgb(214, 218, 203);
     }
 
     .hands {
-        ///////////////////////////////
-        width: 100%;
-        /////////////////
-        height: auto;
+
+
         opacity: 1;
-        margin-left: -20px;
-        margin-right: -8px;
 
     }
 
+    .fullScreenFive {
+        padding: 20px 8px 0 13px;
+    }
 
     /////
 
 
     .sectionSix {
-        padding: 20px 13px 0 20px;
+        padding: 30px 13px 0 20px;
     }
 
 
@@ -501,13 +1098,87 @@ $background-color2: rgb(214, 218, 203);
     }
 
 
-
     .liSix {
         margin-left: 10px;
         text-indent: -1.4em;
         padding-left: 1em;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
     }
 
+    25% {
+        transform: scale(1.1);
+    }
 
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
+
+.logo {
+    animation: heartbeat 3.5s infinite;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+.sections {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-stop: always;
+    scrollbar-width: none;
+    overflow-y: hidden;
+    position: relative;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+    
+
+  }
+  
+  
+  .sectionOne,
+  .sectionTwo,
+  .sectionThree,
+  .sectionFour,
+  .sectionFive,
+  .sectionSix,
+  .footerContainer {
+    flex: 0 0 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    transition: transform 1s ease;
+  }
+  
+  .sections::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+  }
+  

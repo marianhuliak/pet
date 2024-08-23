@@ -2,15 +2,16 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "../../images/mainLogo.png";
+import logo from "../../images/white-tiff.png";
 import basket from "../../images/basket.svg";
 import userIcon from "../../images/userIcon.svg";
 import styles from "./Header.module.scss";
 import BurgerMenu from "../features/BurgerMenu/BurgerMenu.js";
-import BurgerMenu2 from "../features/BurgerMenu/BurgerMenu2.js";
+import BurgerMenuMobile from "../features/BurgerMenu/BurgerMenuMobile.js";
 import burgerIcon from "../../images/burgerMenu.svg";
 import { AnimatePresence } from "framer-motion";
-import Link from 'next/link';
+import Link from "next/link";
+import ScrollArrow from "../features/ScrollArrow/ScrollArrow.js"
 
 const Header = () => {
   const [inputValue, setValue] = useState("");
@@ -43,16 +44,21 @@ const Header = () => {
         <div className={styles.fullScreen}>
           <div className={styles.headerLogoContainer}>
             <div className={styles.logoContainer}>
-              <Image src={logo} alt="Main Logo" className={styles.logoImage} />
-             {/* <p className={styles.logoText}>orthostore</p> */}
+              <Link href="/">
+                <Image
+                  src={logo}
+                  alt="Main Logo"
+                  className={styles.logoImage}
+                />
+              </Link>
             </div>
           </div>
 
           <div className={styles.searchAndMenuContainer}>
             <div className={styles.searchAndInfo}>
               <div className={styles.contactInfo}>
-                <a href="tel:+1234567890" className={styles.firstContactInfo}>
-                  +066 210 0095
+                <a href="tel:+380503039494" className={styles.firstContactInfo}>
+                  050-303-94-94
                 </a>
                 <p className={styles.secondContactInfo}>Пн-Пт: 9:00-18:00</p>
               </div>
@@ -95,7 +101,9 @@ const Header = () => {
               </div>
 
               <ul className={styles.menuItems}>
-                <li className={styles.menuItem}><Link href="/about">Про нас</Link></li>
+                <li className={styles.menuItem}>
+                  <Link href="/about">Про нас</Link>
+                </li>
                 <li className={styles.menuItem}>Виробник</li>
                 <li className={styles.menuItem}>Відгуки</li>
                 <li className={styles.menuItem}>Доставка і оплата</li>
@@ -106,10 +114,12 @@ const Header = () => {
       </div>
       <hr className={styles.customLine} />
       <AnimatePresence>
-        {isOpen && (isScreenWide ? <BurgerMenu /> : <BurgerMenu2 />)}
+        {isOpen && (isScreenWide ? <BurgerMenu /> : <BurgerMenuMobile />)}
       </AnimatePresence>
+      <ScrollArrow />
     </header>
   );
 };
 
 export default Header;
+
