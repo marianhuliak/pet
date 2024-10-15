@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic';
 import styles from "./page.module.scss";
 
-// Ліниве завантаження компонентів
 const Header = dynamic(() => import("./pages/Header/Header.js"));
 const BurgerSlider = dynamic(() => import("./pages/BurgerSlider/BurgerSlider.js"));
 const PromotionalOffers = dynamic(() => import("./pages/PromotionalOffers/PromotionalOffers.js"));
